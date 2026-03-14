@@ -285,6 +285,85 @@
   font-size: 0.95rem;
 }
 
+
+/* ---- BADGE PLATEFORME NEXTRUN ---- */
+
+/*
+ * Bandeau centré entre le titre et les cartes.
+ * Donne une visibilité forte à NextRun sans
+ * surcharger chaque carte individuellement.
+ */
+.inscriptions__platform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.inscriptions__platform-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+
+  /*
+    Fond blanc arrondi : garantit la lisibilité du logo
+    NextRun sur notre fond sombre, quelle que soit
+    la version du fichier fourni (fond transparent ou blanc)
+  */
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 0.4rem 1rem;
+
+  /* Bordure subtilement colorée avec le vert NextRun */
+  border: 2px solid #19ff93;
+
+  /* Légère lueur verte pour attirer l'œil */
+  box-shadow: 0 0 14px rgba(25, 255, 147, 0.25);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inscriptions__platform-logo-link:hover {
+  transform: translateY(-3px);
+  /* Halo plus intense au hover : micro-interaction soignée */
+  box-shadow: 0 0 28px rgba(25, 255, 147, 0.50);
+}
+
+.inscriptions__platform-logo-img {
+  height: 36px;   /* hauteur fixe : le logo s'adapte en largeur automatiquement */
+  width: auto;
+  display: block;
+}
+
+/*
+ * Lien secondaire "En savoir plus" sous le bouton principal.
+ * Discret mais accessible.
+ */
+.inscriptions__card-link-secondary {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.inscriptions__card-link-secondary:hover {
+  color: var(--color-white);
+}
+
+/* Détail carte (ex: "Équipes de 4 coureurs · 200€") */
+.inscriptions__card-detail {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0.25rem;
+}
+
+
 /* ---- PARCOURS APERÇU ---- */
 .parcours-apercu__grid {
   display: grid;
@@ -649,3 +728,25 @@
     height: 90px;
   }
 }
+
+ /*
+ * Bouton spécifique NextRun : on utilise leur vert #19ff93.
+ * Le texte est sombre car le vert est très clair,
+ * pour garantir un bon contraste (accessibilité WCAG).
+ */
+  .btn--nextrun {
+    background: #19ff93;
+    color: #0a2a1e;        /* texte sombre pour lisibilité sur fond vert clair */
+    border-color: #19ff93;
+    font-weight: 700;
+
+    /* Légère lueur verte, cohérente avec le badge NextRun */
+    box-shadow: 0 4px 18px rgba(25, 255, 147, 0.30);
+  }
+
+  .btn--nextrun:hover {
+    background: #00e07a;   /* vert légèrement plus sombre au hover */
+    border-color: #00e07a;
+    box-shadow: 0 6px 24px rgba(25, 255, 147, 0.50);
+    transform: translateY(-2px);
+  }

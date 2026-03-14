@@ -204,7 +204,7 @@
 
         <div class="presentation__text" data-animate="fade-left">
           <span class="section__tag">L'événement</span>
-          <h2 class="section__title">L'un des plus beaux semi-marathons de France</h2>
+          <h2 class="section__title">Le plus beau semi-marathon de France</h2>
           <p>Le Semi Cancale Saint-Malo va célébrer sa <strong>37ᵉ édition</strong> le dimanche 23 août 2026. Parmi les plus beaux parcours de France, il réunit chaque année des milliers de coureurs passionnés.</p>
           <p>Le parcours longe les <strong>paysages spectaculaires de la Côte d'Émeraude</strong>, de Cancale à Saint-Malo, en passant par Saint-Coulomb. Une expérience unique, exigeante et inoubliable.</p>
           <ul class="presentation__badges">
@@ -227,40 +227,73 @@
     </section>
 
     <!-- ========================================
-         INSCRIPTIONS : dates et CTA
-         ======================================== -->
+     INSCRIPTIONS : dates et CTA
+     ======================================== -->
     <section class="inscriptions section section--dark">
-      <div class="container">
+    <div class="container">
         <span class="section__tag section__tag--light">Inscriptions 2026</span>
         <h2 class="section__title section__title--light">Réserve ta place</h2>
 
+
+
         <div class="inscriptions__grid">
 
-          <div class="inscriptions__card" data-animate="fade-up">
+        <!-- Carte Challenge Individuel -->
+        <div class="inscriptions__card" data-animate="fade-up">
+
             <div class="inscriptions__icon">🏃</div>
             <h3>Challenge Individuel</h3>
+
             <p class="inscriptions__date-label">Ouverture des inscriptions</p>
             <p class="inscriptions__date">Vendredi 20 mars à 19h</p>
-            <p>Via la plateforme NextRun</p>
-            <a href="/src/pages/inscriptions-individuelles.html" class="btn btn--primary">
-              S'inscrire
-            </a>
-          </div>
 
-          <div class="inscriptions__card" data-animate="fade-up" style="animation-delay: 0.15s">
-            <div class="inscriptions__icon">🏢</div>
-            <h3>Challenge Entreprises</h3>
-            <p class="inscriptions__date-label">Ouverture des inscriptions</p>
-            <p class="inscriptions__date">Mardi 17 mars à 10h</p>
-            <p>Équipes de 4 coureurs · 200€</p>
-            <a href="/src/pages/challenge-entreprises.html" class="btn btn--primary">
-              Inscrire mon équipe
+            <!--
+            Lien direct NextRun : remplace href="#" par l'URL
+            exacte de la course sur nextrun.fr quand disponible
+            -->
+            <a href="https://nextrun.fr/e/Semi-marathon-Cancale-Saint-Malo-2026" 
+            class="btn btn--nextrun"
+            target="_blank"
+            rel="noopener noreferrer">
+            S'inscrire sur NextRun ↗
             </a>
-          </div>
+
+            <!-- Lien secondaire vers la page de détail du site -->
+            <a href="/src/pages/inscriptions-individuelles.html" 
+            class="inscriptions__card-link-secondary">
+            En savoir plus
+            </a>
 
         </div>
-      </div>
+
+        <!-- Carte Challenge Entreprises -->
+        <div class="inscriptions__card" data-animate="fade-up" style="animation-delay: 0.15s">
+
+            <div class="inscriptions__icon">🏢</div>
+            <h3>Challenge Entreprises</h3>
+
+            <p class="inscriptions__date-label">Ouverture des inscriptions</p>
+            <p class="inscriptions__date">Mardi 17 mars à 10h</p>
+            <p class="inscriptions__card-detail">Équipes de 4 coureurs · 200€</p>
+
+            <a href="https://nextrun.fr/e/Semi-marathon-Cancale-Saint-Malo-2026" 
+            class="btn btn--nextrun"
+            target="_blank"
+            rel="noopener noreferrer">
+            Inscrire mon équipe sur NextRun ↗
+            </a>
+
+            <a href="/src/pages/challenge-entreprises.html" 
+            class="inscriptions__card-link-secondary">
+            En savoir plus
+            </a>
+
+        </div>
+
+        </div>
+    </div>
     </section>
+
 
     <!-- ========================================
          PARCOURS : aperçu visuel
