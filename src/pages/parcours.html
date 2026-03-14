@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Parcours du Semi-Marathon Cancale Saint-Malo 2026 – 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude." />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Parcours – Semi-Marathon Cancale Saint-Malo 2026</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Parcours du Semi-Marathon Cancale Saint-Malo 2026 – 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Parcours – Semi-Marathon Cancale Saint-Malo 2026</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 1. Fonts Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/src/css/main.css" />
-    <link rel="stylesheet" href="/src/css/components/navbar.css" />
-    <link rel="stylesheet" href="/src/css/components/footer.css" />
-    <link rel="stylesheet" href="/src/css/pages/page-hero.css" />
-    <link rel="stylesheet" href="/src/css/pages/parcours.css" />
-  </head>
+  <!-- 
+    2. Leaflet CSS — DOIT être dans le <head>
+    C'est lui qui positionne correctement les tuiles de la carte.
+    Sans lui, les tuiles se dispersent partout sur la page.
+  -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- 3. Tes CSS (après Leaflet pour pouvoir surcharger si besoin) -->
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="/src/css/components/navbar.css" />
+  <link rel="stylesheet" href="/src/css/components/footer.css" />
+  <link rel="stylesheet" href="/src/css/pages/page-hero.css" />
+  <link rel="stylesheet" href="/src/css/pages/parcours.css" />
+
+
+</head>
+
   <body>
 
     <!-- NAVBAR -->
@@ -69,7 +81,8 @@
     </nav>
 
     <!-- PAGE HERO -->
-    <section class="page-hero">
+    <section class="page-hero" style="--hero-bg: url('/src/assets/Ravitaillement.jpg')">
+
       <div class="page-hero__bg"></div>
       <div class="page-hero__overlay"></div>
       <div class="page-hero__content container">
@@ -122,14 +135,14 @@
           <div class="parcours-map__details" data-animate="fade-right">
             <span class="section__tag">Départ</span>
             <h2 class="section__title">Avenue de Scissy, Cancale</h2>
-            <p>Le départ est donné à <strong>8h00</strong> avenue de Scissy à Cancale (35260). Le parcours longe ensuite la Côte d'Émeraude jusqu'aux remparts de Saint-Malo.</p>
+            <p>Le départ est donné à <strong>8h00</strong> avenue de Scissy à Cancale. Le parcours longe ensuite la Côte d'Émeraude jusqu'aux remparts de Saint-Malo.</p>
             <div class="parcours-endpoint">
               <div class="endpoint-item endpoint-item--start">
                 <span class="endpoint-icon">🟢</span>
                 <div>
                   <strong>Départ</strong>
-                  <span>Avenue de Scissy, 35260 Cancale</span>
-                  <span class="endpoint-time">8h00</span>
+                  <span>Avenue de Scissy, Cancale</span>
+                  <span class="endpoint-time">8h00 - 9h00</span>
                 </div>
               </div>
               <div class="endpoint-connector"></div>
@@ -164,7 +177,7 @@
             <div class="etape__content">
               <div class="etape__city-tag">Cancale</div>
               <h3>Départ — Cancale</h3>
-              <p>Avenue de Scissy. Départ en vagues à partir de 8h00. Le parcours s'engage sur le littoral de la Côte d'Émeraude.</p>
+              <p>Avenue de Scissy. Départ en vagues à partir de 8h00.</p>
             </div>
           </div>
 
@@ -174,7 +187,7 @@
             </div>
             <div class="etape__content">
               <h3>Pointe du Grouin</h3>
-              <p>Vue spectaculaire sur la Baie du Mont-Saint-Michel. L'un des plus beaux points du parcours.</p>
+              <p>L'un des plus beaux points du parcours.</p>
             </div>
           </div>
 
@@ -185,7 +198,7 @@
             <div class="etape__content">
               <div class="etape__ravito-tag">Ravitaillement</div>
               <h3>km 5 — Ravitaillement</h3>
-              <p>Premier point de ravitaillement en eau et boissons énergétiques.</p>
+              <p>Premier point de ravitaillement.</p>
             </div>
           </div>
 
@@ -207,7 +220,7 @@
             <div class="etape__content">
               <div class="etape__ravito-tag">Ravitaillement</div>
               <h3>km 10 — Ravitaillement</h3>
-              <p>Point de contrôle du temps limite (1h20 max) et ravitaillement.</p>
+              <p>Point de contrôle du temps limite (1h25 max) et ravitaillement.</p>
             </div>
           </div>
 
@@ -279,9 +292,9 @@
           <div class="infos-block" data-animate="fade-left">
             <h3 class="infos-block__title">🥤 Ravitaillements</h3>
             <ul class="infos-block__list">
-              <li><span class="infos-km">km 5</span> Eau, boissons</li>
-              <li><span class="infos-km">km 10</span> Eau, boissons, énergie</li>
-              <li><span class="infos-km">km 15</span> Eau, boissons, énergie</li>
+              <li><span class="infos-km">km 5</span></li>
+              <li><span class="infos-km">km 10</span></li>
+              <li><span class="infos-km">km 15</span></li>
               <li><span class="infos-km">Arrivée</span> Ravitaillement complet</li>
             </ul>
           </div>
@@ -298,6 +311,27 @@
         </div>
       </div>
     </section>
+
+    <!-- ========================================
+     CARTE INTERACTIVE DU PARCOURS
+     On place la div#map ici, Leaflet va
+     s'en emparer via JavaScript.
+     ======================================== -->
+    <section class="carte-parcours section">
+      <div class="container">
+        <h2 class="section__title" data-animate="fade-up">Carte du parcours</h2>
+        <p class="section__subtitle" data-animate="fade-up">
+          Cancale → Saint-Coulomb → Saint-Malo · 21,1 km
+        </p>
+      </div>
+
+      <!-- 
+        La div#map doit avoir une hauteur définie en CSS,
+        sinon Leaflet affiche une carte invisible (hauteur 0).
+      -->
+      <div id="map" data-animate="fade-up"></div>
+    </section>
+
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -340,5 +374,9 @@
     </footer>
 
     <script type="module" src="/src/js/main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
+    <script src="/src/js/parcours.js"></script>
   </body>
 </html>
