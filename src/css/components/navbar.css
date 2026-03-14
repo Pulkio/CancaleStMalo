@@ -39,6 +39,30 @@
   font-weight: 700;
   color: var(--color-white);
 }
+
+/*
+ * Logo image dans la navbar.
+ * On contrôle uniquement la hauteur — la largeur
+ * s'adapte automatiquement (width: auto) pour ne
+ * pas déformer le logo, quelle que soit sa proportion.
+ */
+.navbar__logo-img {
+  height: 100px;      /* hauteur fixe dans la barre */
+  width: auto;       /* largeur proportionnelle     */
+  display: block;    /* supprime l'espace fantôme sous l'image (inline bug) */
+  object-fit: contain;
+}
+
+/*
+ * Sur mobile la navbar est plus compacte,
+ * on réduit légèrement le logo.
+ */
+@media (max-width: 768px) {
+  .navbar__logo-img {
+    height: 50px;
+  }
+}
+
 .navbar__logo-accent { color: var(--color-primary); font-size: 1.6rem; }
 .navbar__logo-year   { font-size: 0.9rem; opacity: 0.7; font-weight: 400; }
 
