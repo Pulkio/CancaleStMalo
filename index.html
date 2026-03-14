@@ -384,52 +384,190 @@
     </section>
 
     <!-- ========================================
-         PARTENAIRES
-         ======================================== -->
-    <section class="partenaires section section--gray">
-      <div class="container">
-        <span class="section__tag">Ils nous soutiennent</span>
-        <h2 class="section__title">Nos partenaires</h2>
+     PARTENAIRES
+     ======================================== -->
+<section class="partenaires section section--gray">
+  <div class="container">
+    <span class="section__tag">Ils nous soutiennent</span>
+    <h2 class="section__title">Nos partenaires</h2>
 
-        <!-- Partenaires Club (les plus importants) -->
-        <p class="partenaires__tier-label">Partenaires Club</p>
-        <div class="partenaires__grid partenaires__grid--club">
-          <div class="partenaire-logo">Logo partenaire 1</div>
-          <div class="partenaire-logo">Logo partenaire 2</div>
-          <div class="partenaire-logo">Logo partenaire 3</div>
-        </div>
+    <!--
+      PARTENAIRES CLUB
+      ────────────────
+      On regroupe ici le partenaire majeur ET le club organisateur
+      dans la MÊME grille --club, côte à côte.
+      
+      La technique background-image garantit que le logo occupe
+      100% du conteneur (520×240px) quelle que soit la résolution
+      du fichier source — c'est le conteneur qui définit la taille,
+      pas l'image.
 
-        <!-- Partenaires Prestige -->
-        <p class="partenaires__tier-label">Partenaires Prestige</p>
-        <div class="partenaires__grid partenaires__grid--prestige">
-          <div class="partenaire-logo">Logo partenaire 4</div>
-          <div class="partenaire-logo">Logo partenaire 5</div>
-          <div class="partenaire-logo">Logo partenaire 6</div>
-          <div class="partenaire-logo">Logo partenaire 7</div>
-        </div>
+      aria-label = texte alternatif pour l'accessibilité
+      (remplace le alt de l'<img> qu'on n'utilise plus)
+    -->
 
-        <!-- Partenaires Performance -->
-        <p class="partenaires__tier-label">Partenaires Performance</p>
-        <div class="partenaires__grid partenaires__grid--performance">
-          <div class="partenaire-logo">Logo partenaire 8</div>
-          <div class="partenaire-logo">Logo partenaire 9</div>
-          <div class="partenaire-logo">Logo partenaire 10</div>
-          <div class="partenaire-logo">Logo partenaire 11</div>
-          <div class="partenaire-logo">Logo partenaire 12</div>
-        </div>
+    <p class="partenaires__tier-label">Club Organisateur</p>
+    <div class="partenaires__grid partenaires__grid--club">
 
-        <!-- Partenaires Essentiels -->
-        <p class="partenaires__tier-label">Partenaires Essentiels</p>
-        <div class="partenaires__grid partenaires__grid--essentiels">
-          <div class="partenaire-logo">Logo 13</div>
-          <div class="partenaire-logo">Logo 14</div>
-          <div class="partenaire-logo">Logo 15</div>
-          <div class="partenaire-logo">Logo 16</div>
-          <div class="partenaire-logo">Logo 17</div>
-          <div class="partenaire-logo">Logo 18</div>
-        </div>
+      <!-- Club organisateur — même niveau visuel, même grille -->
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/Logo_CJF.png')"
+         aria-label="CJF Saint-Malo — Club Organisateur"
+         target="_blank"
+         rel="noopener noreferrer">
+      </a>
 
-      </div>
+    </div>
+
+    <p class="partenaires__tier-label">Partenaire Majeur Club</p>
+    <div class="partenaires__grid partenaires__grid--club">
+
+      <!-- Partenaire majeur Club -->
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/Logo_Breizh_Surimi.png')"
+         aria-label="Breizh Surimi — Partenaire Majeur Club"
+         target="_blank"
+         rel="noopener noreferrer">
+      </a>
+
+    </div>
+
+    <!--
+      PARTENAIRES PRESTIGE
+      ─────────────────────
+      Même technique : background-image sur l'élément <a>.
+      Remplace href="#" par la vraie URL du partenaire.
+    -->
+    <p class="partenaires__tier-label">Partenaires Prestige</p>
+    <div class="partenaires__grid partenaires__grid--prestige">
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-prestige-1.png')"
+         aria-label="Nom du partenaire Prestige 1"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-prestige-2.png')"
+         aria-label="Nom du partenaire Prestige 2"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-prestige-3.png')"
+         aria-label="Nom du partenaire Prestige 3"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-prestige-4.png')"
+         aria-label="Nom du partenaire Prestige 4"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+    </div>
+
+    <!--
+      PARTENAIRES PERFORMANCE
+      ────────────────────────
+    -->
+    <p class="partenaires__tier-label">Partenaires Performance</p>
+    <div class="partenaires__grid partenaires__grid--performance">
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-perf-1.png')"
+         aria-label="Nom du partenaire Performance 1"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-perf-2.png')"
+         aria-label="Nom du partenaire Performance 2"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-perf-3.png')"
+         aria-label="Nom du partenaire Performance 3"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-perf-4.png')"
+         aria-label="Nom du partenaire Performance 4"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-perf-5.png')"
+         aria-label="Nom du partenaire Performance 5"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+    </div>
+
+    <!--
+      PARTENAIRES ESSENTIELS
+      ───────────────────────
+    -->
+    <p class="partenaires__tier-label">Partenaires Essentiels</p>
+    <div class="partenaires__grid partenaires__grid--essentiels">
+         <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-essentiel-1.png')"
+         aria-label="Nom du partenaire Essentiel 1"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-essentiel-2.png')"
+         aria-label="Nom du partenaire Essentiel 2"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-essentiel-3.png')"
+         aria-label="Nom du partenaire Essentiel 3"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-essentiel-4.png')"
+         aria-label="Nom du partenaire Essentiel 4"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-essentiel-5.png')"
+         aria-label="Nom du partenaire Essentiel 5"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+      <a href="#"
+         class="partenaire-logo"
+         style="background-image: url('/src/assets/logos/partenaire-essentiel-6.png')"
+         aria-label="Nom du partenaire Essentiel 6"
+         target="_blank" rel="noopener noreferrer">
+      </a>
+
+    </div>
+
+    </div>
     </section>
 
     <!-- ========================================
@@ -447,6 +585,7 @@
           />
           <p>23 août 2026 · Côte d'Émeraude</p>
           <p>Contact : <a href="mailto:semi@cancalestmalo.fr">semi@cancalestmalo.fr</a></p>
+          <p> Crédit Photo : <a href=https://objectif-pro.fr>@ObjectifPro</a> </p>
         </div>
 
         <div class="footer__links">

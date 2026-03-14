@@ -17,7 +17,6 @@
   text-align: center;
 }
 
-/* Image de fond (parallax via JS) */
 .hero__bg {
   position: absolute;
   inset: -10%;
@@ -27,11 +26,6 @@
   will-change: transform;
 }
 
-/*
- * Overlay avec dégradé directionnel.
- * Plus transparent en haut (on voit le paysage)
- * Plus sombre au centre/bas (le texte ressort)
- */
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -43,10 +37,6 @@
   );
 }
 
-/*
- * Contenu texte — sans encadré.
- * Le text-shadow suffit pour la lisibilité.
- */
 .hero__content {
   position: relative;
   z-index: 2;
@@ -55,10 +45,6 @@
   animation: fadeInDown 1s ease both;
 }
 
-/*
- * Badge "37ème édition" avec traits décoratifs
- * de chaque côté — technique "ruled title".
- */
 .hero__edition-badge {
   display: flex;
   align-items: center;
@@ -67,7 +53,6 @@
   margin-bottom: 1.25rem;
 }
 
-/* Traits horizontaux de part et d'autre du texte */
 .hero__edition-line {
   display: block;
   height: 1px;
@@ -76,7 +61,6 @@
   opacity: 0.8;
 }
 
-/* Texte de l'édition — grossi avec clamp() */
 .hero__edition-text {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 600;
@@ -87,21 +71,12 @@
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
-/*
- * Le <sup> "ème" : taille réduite pour ne pas
- * casser la hauteur de ligne.
- */
 .hero__edition-text sup {
   font-size: 0.6em;
   vertical-align: super;
   letter-spacing: 0;
 }
 
-/*
- * Titre principal — text-shadow en double couche :
- * couche 1 (flou court) = bord net et contrasté
- * couche 2 (flou large) = halo doux autour du mot
- */
 .hero__title {
   font-family: var(--font-title);
   font-size: clamp(2.8rem, 8vw, 6rem);
@@ -136,7 +111,6 @@
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Boutons côte à côte */
 .hero__actions {
   display: flex;
   gap: 1rem;
@@ -144,7 +118,6 @@
   flex-wrap: wrap;
 }
 
-/* Indicateur "scroll vers le bas" */
 .hero__scroll-indicator {
   position: absolute;
   bottom: 2rem;
@@ -321,10 +294,6 @@
   margin-top: 1rem;
 }
 
-/*
- * Bande dénivelé — 3 blocs (D+, D-, villes)
- * séparés par des barres verticales légères.
- */
 .parcours-apercu__denivele {
   display: flex;
   align-items: center;
@@ -341,9 +310,7 @@
   gap: 0.25rem;
 }
 
-.denivele__icon {
-  font-size: 1.3rem;
-}
+.denivele__icon { font-size: 1.3rem; }
 
 .denivele__value {
   font-family: var(--font-title);
@@ -359,7 +326,6 @@
   color: var(--color-gray);
 }
 
-/* Séparateur vertical entre les 3 blocs dénivelé */
 .denivele__separator {
   color: rgba(1, 114, 132, 0.25);
   font-size: 1.8rem;
@@ -373,11 +339,6 @@
   gap: 1rem;
 }
 
-/*
- * Point neutre par défaut.
- * Les variantes --start, --end, --city, --landmark
- * modifient la couleur et la taille selon l'importance.
- */
 .step__dot {
   width: 14px;
   height: 14px;
@@ -388,39 +349,11 @@
   margin-top: 5px;
 }
 
-/* Départ : couleur primaire pleine */
-.step__dot--start {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-}
+.step__dot--start  { background: var(--color-primary);   border-color: var(--color-primary); }
+.step__dot--end    { background: var(--color-secondary);  border-color: var(--color-secondary); }
+.step__dot--city   { background: var(--color-primary);   border-color: var(--color-primary); width: 14px; height: 14px; }
+.step__dot--landmark { background: transparent; border: 2px solid var(--color-primary); width: 10px; height: 10px; }
 
-/* Arrivée : couleur secondaire (bleu foncé) */
-.step__dot--end {
-  background: var(--color-secondary);
-  border-color: var(--color-secondary);
-}
-
-/* Changement de ville : primaire, même taille que start */
-.step__dot--city {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-  width: 14px;
-  height: 14px;
-}
-
-/*
- * Point d'intérêt (ex: Pointe du Grouin, La Digue)
- * Cercle vide (transparent) avec bordure primaire.
- * Légèrement plus petit pour hiérarchiser visuellement.
- */
-.step__dot--landmark {
-  background: transparent;
-  border: 2px solid var(--color-primary);
-  width: 10px;
-  height: 10px;
-}
-
-/* Ligne verticale reliant les étapes */
 .step__line {
   width: 2px;
   height: 32px;
@@ -428,19 +361,10 @@
   margin-left: 6px;
 }
 
-.step__content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
+.step__content { display: flex; flex-direction: column; gap: 0.15rem; }
 .step__content strong { font-weight: 600; color: var(--color-dark); }
 .step__content span   { font-size: 0.85rem; color: var(--color-gray); }
 
-/*
- * Badge ville — pastille colorée affichée à droite
- * de l'étape pour signaler l'entrée dans une nouvelle ville.
- * margin-left: auto le pousse naturellement à droite.
- */
 .step__city-badge {
   font-size: 0.7rem;
   font-weight: 600;
@@ -452,13 +376,10 @@
   border-radius: 20px;
   white-space: nowrap;
   margin-left: auto;
-  flex-shrink: 0; /* ne se compresse pas si le texte est long */
+  flex-shrink: 0;
 }
 
-/* Image parcours */
-.parcours-apercu__image {
-  position: relative;
-}
+.parcours-apercu__image { position: relative; }
 .parcours-apercu__image img {
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
@@ -468,36 +389,77 @@
 }
 .parcours-apercu__btn { margin-top: 1.25rem; }
 
-/* ---- PARTENAIRES ---- */
+/* =============================================
+   PARTENAIRES — hiérarchie visuelle 4 niveaux
+   ============================================= */
+
 .partenaires__tier-label {
   font-family: var(--font-title);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  /*
+   * On grossit les labels de niveau :
+   * avant 0.85rem → maintenant 1rem + majuscules espacées.
+   * L'œil perçoit immédiatement la séparation entre niveaux.
+   */
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-secondary);
   text-align: center;
-  margin: 2.5rem 0 1rem;
+  margin: 3rem 0 1.5rem;
 }
 
-.partenaires__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-}
-
+/*
+ * =====================================================
+ * TECHNIQUE "BACKGROUND-IMAGE" POUR LES LOGOS
+ * =====================================================
+ *
+ * Problème résolu définitivement :
+ * Avec <img>, le navigateur respecte la taille intrinsèque
+ * du fichier et refuse de l'agrandir au-delà, même avec
+ * min-width/min-height. C'est une contrainte du moteur de
+ * rendu pour éviter les images floues.
+ *
+ * Solution : on utilise le conteneur lui-même comme
+ * surface d'affichage via background-image + background-size: contain.
+ * Le background-size: contain remplit TOUJOURS 100% du conteneur
+ * en respectant le ratio, quelle que soit la résolution du fichier.
+ *
+ * HTML attendu (deux options) :
+ *
+ * Option A — style inline (simple, direct) :
+ *   <a class="partenaire-logo"
+ *      style="background-image: url('/assets/logos/monlogo.png')"
+ *      aria-label="Nom du partenaire">
+ *   </a>
+ *
+ * Option B — attribut data + JS (plus propre) :
+ *   <a class="partenaire-logo"
+ *      data-logo="/assets/logos/monlogo.png"
+ *      aria-label="Nom du partenaire">
+ *   </a>
+ *   // JS : document.querySelectorAll('[data-logo]').forEach(el => {
+ *   //   el.style.backgroundImage = `url(${el.dataset.logo})`;
+ *   // });
+ * =====================================================
+ */
 .partenaire-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-white);
-  border: 1px solid rgba(1,114,132,0.15);
+  display: block;                    /* plus de flexbox nécessaire */
+  background-color: var(--color-white);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /*
+   * contain = l'image remplit tout le conteneur
+   * sans déborder ni se rogner, ratio préservé.
+   * Fonctionne à 100% indépendamment de la résolution source.
+   */
+  background-size: contain;
+
+  border: 1px solid rgba(1, 114, 132, 0.15);
   border-radius: var(--border-radius);
-  padding: 1rem 2rem;
-  font-size: 0.85rem;
-  color: var(--color-gray);
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
   transition: box-shadow var(--transition), transform var(--transition);
 }
 .partenaire-logo:hover {
@@ -505,23 +467,116 @@
   transform: translateY(-3px);
 }
 
-/* Tailles différentes selon le niveau de partenariat */
-.partenaires__grid--club        .partenaire-logo { min-width: 180px; min-height: 80px; }
-.partenaires__grid--prestige    .partenaire-logo { min-width: 140px; min-height: 65px; }
-.partenaires__grid--performance .partenaire-logo { min-width: 120px; min-height: 55px; }
-.partenaires__grid--essentiels  .partenaire-logo { min-width: 100px; min-height: 50px; }
+/*
+ * Si une balise <img> est encore présente à l'intérieur
+ * (transition progressive), on la masque proprement.
+ * Elle reste dans le DOM pour l'accessibilité (alt text).
+ */
+.partenaire-logo img {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+/* ---- CLUB : les 2 logos VIP côte à côte, très grands ---- */
+.partenaires__grid--club {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/*
+ * 520×240px : taille maximale imposée au conteneur.
+ * background-size: contain remplit ces 520×240px
+ * à 100%, peu importe si le fichier fait 80px ou 2000px.
+ * padding: 1.5rem = zone de "respiration" visuelle autour du logo
+ * mais le background s'arrête AU BORD du conteneur (pas affecté par padding).
+ * On utilise background-origin: padding-box (défaut) → ok.
+ */
+.partenaires__grid--club .partenaire-logo {
+  width: 520px;
+  height: 240px;
+  /* padding interne pour que le logo ne colle pas aux bords */
+  background-origin: content-box;
+  padding: 1.5rem 2rem;
+
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 8px 40px rgba(1, 114, 132, 0.20);
+}
+.partenaires__grid--club .partenaire-logo:hover {
+  box-shadow: 0 16px 56px rgba(1, 114, 132, 0.32);
+  transform: translateY(-6px);
+}
+
+/* ---- PRESTIGE : grands logos bien mis en avant ---- */
+.partenaires__grid--prestige {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.partenaires__grid--prestige .partenaire-logo {
+  width: 360px;
+  height: 180px;
+  background-origin: content-box;
+  padding: 1.25rem 1.75rem;
+
+  border: 1.5px solid rgba(1, 114, 132, 0.35);
+  box-shadow: 0 4px 20px rgba(1, 114, 132, 0.12);
+}
+.partenaires__grid--prestige .partenaire-logo:hover {
+  box-shadow: 0 10px 32px rgba(1, 114, 132, 0.24);
+  transform: translateY(-5px);
+}
+
+/* ---- PERFORMANCE : logos moyens ---- */
+.partenaires__grid--performance {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.partenaires__grid--performance .partenaire-logo {
+  width: 240px;
+  height: 120px;
+  background-origin: content-box;
+  padding: 1rem 1.25rem;
+}
+
+/* ---- ESSENTIELS : logos compacts ---- */
+.partenaires__grid--essentiels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.partenaires__grid--essentiels .partenaire-logo {
+  width: 200px;
+  height: 100px;
+  background-origin: content-box;
+  padding: 0.75rem 1rem;
+}
 
 /* ---- RESPONSIVE HOME ---- */
 @media (max-width: 900px) {
 
-  /* Toutes les grilles 2 colonnes passent en 1 colonne */
   .presentation__container,
   .inscriptions__grid,
   .parcours-apercu__grid {
     grid-template-columns: 1fr;
   }
 
-  /* Stats : 2 colonnes au lieu de 4 */
   .stats__container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -529,42 +584,68 @@
     border-right: none;
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
-  /* Séparateur droit uniquement sur les éléments impairs */
   .stats__item:nth-child(odd) {
     border-right: 1px solid rgba(255,255,255,0.1);
   }
 
-  /* Hero : titre sur plusieurs lignes sur mobile */
   .hero__title {
     white-space: normal;
     font-size: clamp(1.8rem, 10vw, 3rem);
   }
 
-  /* Boutons hero empilés verticalement */
   .hero__actions {
     flex-direction: column;
     align-items: center;
   }
 
-  /* Séparateurs dénivelé masqués quand les blocs s'empilent */
-  .denivele__separator {
-    display: none;
-  }
-
-  .parcours-apercu__denivele {
-    gap: 1.25rem;
-  }
+  .denivele__separator { display: none; }
+  .parcours-apercu__denivele { gap: 1.25rem; }
+  .step { flex-wrap: wrap; }
+  .step__city-badge { margin-left: 2.5rem; }
 
   /*
-   * Sur mobile les badges ville prennent trop de place
-   * sur une ligne. On les passe en dessous du contenu
-   * en cassant le flex row.
+   * Mobile — les conteneurs s'adaptent en largeur
+   * mais la hauteur reste fixe pour garder la lisibilité.
+   * background-size: contain s'adapte automatiquement.
    */
-  .step {
-    flex-wrap: wrap;
+  .partenaires__grid--club .partenaire-logo {
+    width: 100%;
+    max-width: 520px;
+    height: 200px;
   }
+  .partenaires__grid--prestige .partenaire-logo {
+    /* 2 par ligne : chaque logo = 50% - moitié du gap */
+    width: calc(50% - 1rem);
+    height: 160px;
+  }
+  .partenaires__grid--performance .partenaire-logo {
+    width: calc(50% - 0.75rem);
+    height: 110px;
+  }
+  .partenaires__grid--essentiels .partenaire-logo {
+    width: calc(33% - 0.85rem);
+    height: 90px;
+  }
+}
 
-  .step__city-badge {
-    margin-left: 2.5rem; /* aligne avec le texte, pas le dot */
+/* Très petits écrans ≤ 420px */
+@media (max-width: 420px) {
+  .partenaires__grid--club .partenaire-logo {
+    height: 170px;
+  }
+  .partenaires__grid--prestige .partenaire-logo {
+    /* 1 par ligne sur très petit écran */
+    width: 100%;
+    max-width: 360px;
+    height: 160px;
+  }
+  .partenaires__grid--performance .partenaire-logo {
+    width: 100%;
+    max-width: 280px;
+    height: 120px;
+  }
+  .partenaires__grid--essentiels .partenaire-logo {
+    width: calc(50% - 0.625rem);
+    height: 90px;
   }
 }

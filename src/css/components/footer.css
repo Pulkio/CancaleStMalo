@@ -20,10 +20,11 @@
 
 /* Logo et description */
 .footer__logo {
-  font-family: var(--font-title);
-  font-size: 1.5rem;
-  color: var(--color-white);
-  margin-bottom: 0.75rem;
+  height: 100px;        /* taille raisonnable pour un footer */
+  width: auto;         /* proportion préservée              */
+  display: block;      /* supprime l'espace fantôme inline  */
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 .footer__logo span { color: var(--color-primary); }
 
