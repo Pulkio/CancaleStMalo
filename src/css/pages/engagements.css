@@ -48,10 +48,10 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* ---- Engagements liste ---- */
+/* ---- Engagements liste — 3 cartes fixes ---- */
 .eng-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Toujours 3 colonnes sur desktop */
   gap: 1.5rem;
 }
 
@@ -84,31 +84,10 @@
   font-size: 0.9rem;
   color: var(--color-gray);
   line-height: 1.7;
-  flex: 1;
+  flex: 1; /* Le texte pousse les éléments suivants vers le bas */
 }
 
-.eng-card__actions {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(63, 170, 180, 0.1);
-}
-
-.eng-card__actions li {
-  font-size: 0.82rem;
-  color: var(--color-secondary);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.eng-card__actions li::before {
-  content: '✓';
-  font-weight: 700;
-  color: var(--color-primary);
-}
+/* On supprime .eng-card__actions qui n'est plus utilisé */
 
 /* ---- CTA bénévole ---- */
 .eng-benevole__inner {
@@ -122,18 +101,141 @@
   margin-top: 0.75rem;
 }
 
+/* ========================================
+   SECTION ASSOCIATION — Rêves de Clown
+   Layout 2 colonnes : image | texte
+   ======================================== */
+.association__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50% image, 50% texte */
+  gap: 4rem;
+  align-items: center;
+}
+
+.association__image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.association__title {
+  font-family: var(--font-title);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--color-dark);
+  margin: 0.5rem 0 1rem;
+}
+
+.association__intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+.association__content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Badges reconnaissance officielle */
+.association__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+}
+
+.badge {
+  background: rgba(63, 170, 180, 0.1);
+  border: 1px solid var(--color-primary);
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+}
+
+/* ---- Bloc don ---- */
+.association__don {
+  background: linear-gradient(135deg, #f0fafb, #e0f4f6);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 10px 10px 0;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.association__don-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.association__don-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+/* Montants en cercles */
+.don__amounts {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.don__amount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%; /* Forme cercle */
+  border: 2px solid var(--color-primary);
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Le montant mis en avant visuellement */
+.don__amount--highlight {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.association__don-footnote {
+  font-size: 0.8rem;
+  color: #777;
+  font-style: italic;
+  margin: 0; /* Pas de marge en bas dans le bloc */
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 1100px) {
   .eng-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 900px) {
-  .eng-intro__inner   { grid-template-columns: 1fr; gap: 2.5rem; }
-  .eng-intro__pillars { justify-content: center; }
+  .eng-intro__inner    { grid-template-columns: 1fr; gap: 2.5rem; }
+  .eng-intro__pillars  { justify-content: center; }
   .eng-benevole__inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+
+  /* L'image passe au-dessus du texte sur tablette */
+  .association__inner  { grid-template-columns: 1fr; gap: 2rem; }
 }
 
 @media (max-width: 600px) {
-  .eng-grid { grid-template-columns: 1fr; }
+  .eng-grid           { grid-template-columns: 1fr; }
   .eng-intro__pillars { grid-template-columns: repeat(4, 1fr); }
+
+  /* Les cercles de don un peu plus petits sur mobile */
+  .don__amount {
+    width: 48px;
+    height: 48px;
+    font-size: 0.9rem;
+  }
 }

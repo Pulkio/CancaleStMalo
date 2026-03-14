@@ -68,7 +68,7 @@
     </nav>
 
     <!-- PAGE HERO -->
-    <section class="page-hero">
+    <section class="page-hero" style="--hero-bg: url('/src/assets/benevoles.jpg')">
       <div class="page-hero__bg"></div>
       <div class="page-hero__overlay"></div>
       <div class="page-hero__content container">
@@ -116,84 +116,120 @@
     </section>
 
     <!-- ========================================
-         NOS ENGAGEMENTS
-         ======================================== -->
-    <section class="engagements-list section">
+     NOS ENGAGEMENTS
+     Version simplifiée : 3 cartes essentielles
+     ======================================== -->
+<section class="engagements-list section">
+  <div class="container">
+    <span class="section__tag">Nos actions concrètes</span>
+    <h2 class="section__title">Ce que nous mettons en place</h2>
+
+    <div class="eng-grid eng-grid--3">
+
+      <div class="eng-card" data-animate="fade-up">
+        <div class="eng-card__icon">🏘️</div>
+        <h3>Respect des villes</h3>
+        <p>
+          Cancale, Saint-Coulomb et Saint-Malo nous accueillent chaque année. 
+          Nous travaillons main dans la main avec les municipalités pour limiter 
+          les perturbations.
+        </p>
+      </div>
+
+      <div class="eng-card" data-animate="fade-up" style="animation-delay:0.1s">
+        <div class="eng-card__icon">💚</div>
+        <h3>Respect des bénévoles</h3>
+        <p>
+          Plus de 300 bénévoles rendent cet événement possible. 
+          Leur engagement est précieux — un sourire et un merci 
+          font toute la différence sur le parcours.
+        </p>
+      </div>
+
+      <div class="eng-card" data-animate="fade-up" style="animation-delay:0.2s">
+        <div class="eng-card__icon">🚌</div>
+        <h3>Navettes gratuites</h3>
+        <p>
+          Pour limiter l'impact de l'événement sur les routes et le stationnement, 
+          des navettes gratuites sont mises en place le matin de la course 
+          depuis Saint-Malo jusqu'au départ de Cancale.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================================
+     RÊVES DE CLOWN
+     Section dédiée à l'association partenaire 2026
+     ======================================== -->
+    <section class="section association">
       <div class="container">
-        <span class="section__tag">Nos actions concrètes</span>
-        <h2 class="section__title">Ce que nous mettons en place</h2>
 
-        <div class="eng-grid">
+        <div class="association__inner">
 
-          <div class="eng-card" data-animate="fade-up">
-            <div class="eng-card__icon">🏘️</div>
-            <h3>Respect des villes traversées</h3>
-            <p>L'événement passe par Cancale, Saint-Coulomb et Saint-Malo. Nous travaillons étroitement avec les municipalités pour minimiser les perturbations et respecter les habitants.</p>
-            <ul class="eng-card__actions">
-              <li>Concertation avec les mairies</li>
-              <li>Signalisation et sécurisation du parcours</li>
-              <li>Sensibilisation des coureurs</li>
-            </ul>
+          <!-- Image de l'association — à remplacer par une vraie photo -->
+          <div class="association__image" data-animate="fade-right">
+            <img
+              src="../assets/clown.png"
+              alt="Clown hospitalier Rêves de Clown avec un enfant"
+              loading="lazy"
+            />
           </div>
 
-          <div class="eng-card" data-animate="fade-up" style="animation-delay:0.1s">
-            <div class="eng-card__icon">💚</div>
-            <h3>Respect des bénévoles</h3>
-            <p>Plus de 300 bénévoles rendent cet événement possible chaque année. Leur engagement mérite respect et gratitude de la part de tous les participants.</p>
-            <ul class="eng-card__actions">
-              <li>Formation et briefing des bénévoles</li>
-              <li>Sensibilisation des coureurs</li>
-              <li>Charte de comportement</li>
-            </ul>
-          </div>
+          <!-- Contenu texte -->
+          <div class="association__content" data-animate="fade-left">
 
-          <div class="eng-card" data-animate="fade-up" style="animation-delay:0.2s">
-            <div class="eng-card__icon">♻️</div>
-            <h3>Tri des déchets</h3>
-            <p>Des points de tri sont installés sur l'ensemble du parcours et à l'arrivée. Nous visons la réduction maximale des déchets sur les espaces naturels traversés.</p>
-            <ul class="eng-card__actions">
-              <li>Points de tri sur le parcours</li>
-              <li>Collecte active après la course</li>
-              <li>Gobelets réutilisables aux ravitaillements</li>
-            </ul>
-          </div>
+            <span class="section__tag">Notre association 2026</span>
+            <h2 class="association__title">
+              🎭 Rêves De Clown
+            </h2>
+            <p class="association__intro">
+              Créée en 1998 à Lorient, <strong>Rêves De Clown</strong> est une association 
+              unique en Bretagne. Ses clowns hospitaliers — des professionnels formés 
+              au milieu médical — interviennent chambre après chambre dans 
+              <strong>19 établissements de soins</strong> de l'Ouest de la France.
+            </p>
+            <p>
+              Pédiatrie, réanimation, oncologie, soins palliatifs, EHPAD… 
+              Ils accompagnent même les enfants jusqu'au bloc opératoire. 
+              Leur mission : dédramatiser les soins, apaiser les angoisses 
+              et offrir un moment de légèreté à celles et ceux qui en ont le plus besoin.
+            </p>
 
-          <div class="eng-card" data-animate="fade-up" style="animation-delay:0.3s">
-            <div class="eng-card__icon">🚌</div>
-            <h3>Transports responsables</h3>
-            <p>Des navettes gratuites sont mises en place le matin de la course. Nous encourageons fortement l'utilisation des transports en commun et du covoiturage.</p>
-            <ul class="eng-card__actions">
-              <li>Navettes gratuites Saint-Malo → Cancale</li>
-              <li>Partenariat transports en commun</li>
-              <li>Communication sur l'éco-mobilité</li>
-            </ul>
-          </div>
+            <!-- Badges reconnaissance -->
+            <div class="association__badges">
+              <span class="badge">✅ Reconnue d'Intérêt Général</span>
+              <span class="badge">✅ Œuvre de Bienfaisance</span>
+            </div>
 
-          <div class="eng-card" data-animate="fade-up" style="animation-delay:0.1s">
-            <div class="eng-card__icon">🚗</div>
-            <h3>Covoiturage encouragé</h3>
-            <p>Le covoiturage réduit les embouteillages, facilite le stationnement et diminue l'empreinte carbone de l'événement. Rejoignez les groupes dédiés !</p>
-            <ul class="eng-card__actions">
-              <li>Groupes de covoiturage en ligne</li>
-              <li>Communication sur les plateformes</li>
-              <li>Stationnement facilité pour covoitureurs</li>
-            </ul>
-          </div>
+            <!-- Call to action don -->
+            <div class="association__don">
+              <p class="association__don-title">
+                💛 Soutenez Rêves De Clown lors de votre inscription
+              </p>
+              <p class="association__don-text">
+                Lors de votre inscription sur NextRun, vous pouvez ajouter un don 
+                directement à votre commande :
+              </p>
+              <!-- Montants de don -->
+              <div class="don__amounts">
+                <span class="don__amount">1 €</span>
+                <span class="don__amount">5 €</span>
+                <span class="don__amount don__amount--highlight">10 €</span>
+              </div>
+              <p class="association__don-footnote">
+                Chaque euro contribue directement à financer les interventions 
+                et à offrir un sourire à ceux qui en ont besoin.
+              </p>
+            </div>
 
-          <div class="eng-card" data-animate="fade-up" style="animation-delay:0.2s">
-            <div class="eng-card__icon">🌊</div>
-            <h3>Protection du littoral</h3>
-            <p>Le parcours longe la Côte d'Émeraude, un espace naturel remarquable. Nous sensibilisons tous les participants à la protection de ce patrimoine unique.</p>
-            <ul class="eng-card__actions">
-              <li>Respect des espaces naturels</li>
-              <li>Parcours balisé hors zones protégées</li>
-              <li>Sensibilisation des coureurs</li>
-            </ul>
           </div>
-
         </div>
       </div>
     </section>
+
 
     <!-- ========================================
          CTA BÉNÉVOLE
