@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Semi-Marathon Cancale Saint-Malo - 37ème édition - 23 août 2026 - 7000 coureurs sur la Côte d'Émeraude" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Semi-Marathon Cancale Saint-Malo 2026</title>
+
+    <!-- Google Fonts : Inter pour le texte, Oswald pour les titres sportifs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS global : variables, reset, boutons, animations -->
+    <link rel="stylesheet" href="/src/css/main.css" />
+
+    <!-- Navbar -->
+    <link rel="stylesheet" href="/src/css/components/navbar.css" />
+
+    <!-- Footer -->
+    <link rel="stylesheet" href="/src/css/components/footer.css" />
+
+    <!-- Styles spécifiques à la page d'accueil uniquement -->
+    <link rel="stylesheet" href="/src/css/pages/home.css" />
+
+  </head>
+  <body>
+
+    <!-- ========================================
+         NAVBAR : fixe en haut, transparente 
+         puis opaque au scroll
+         ======================================== -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar__container">
+
+        <!-- Logo -->
+        <a href="/" class="navbar__logo">
+          <span class="navbar__logo-text">SEMI</span>
+          <span class="navbar__logo-accent">CSM</span>
+          <span class="navbar__logo-year">2026</span>
+        </a>
+
+        <!-- Bouton hamburger pour mobile -->
+        <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Menu principal -->
+        <ul class="navbar__menu" id="navMenu">
+
+          <li class="navbar__item"><a href="/" class="navbar__link">Accueil</a></li>
+
+          <!-- Dropdown Inscriptions -->
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">
+              S'inscrire <span class="navbar__arrow">▾</span>
+            </a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/inscriptions-individuelles.html">Inscriptions individuelles</a></li>
+              <li><a href="/src/pages/challenge-entreprises.html">Challenge entreprises</a></li>
+              <li><a href="/src/pages/dossards.html">Dossards</a></li>
+              <li><a href="/src/pages/dossards.html#justificatifs">Justificatifs d'inscription</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropdown Info course -->
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">
+              Info course <span class="navbar__arrow">▾</span>
+            </a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/parcours.html">Parcours</a></li>
+              <li><a href="/src/pages/parking.html">Parking</a></li>
+              <li><a href="/src/pages/navettes.html">Navettes</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropdown Résultats -->
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">
+              Résultats <span class="navbar__arrow">▾</span>
+            </a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/resultats.html">Résultats</a></li>
+              <li><a href="/src/pages/classements.html">Classements & Récompenses</a></li>
+              <li><a href="/src/pages/retours-coureurs.html">Retours coureurs</a></li>
+              <li><a href="/src/pages/photos-videos.html">Photos & Vidéos</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropdown Engagements -->
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">
+              Engagements <span class="navbar__arrow">▾</span>
+            </a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/engagements.html">Nos engagements</a></li>
+              <li><a href="/src/pages/benevoles.html">Devenir bénévole</a></li>
+            </ul>
+          </li>
+
+          <!-- CTA Inscription bien visible -->
+          <li class="navbar__item">
+            <a href="/src/pages/inscriptions-individuelles.html" class="navbar__cta">
+              Je m'inscris
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========================================
+         HERO : plein écran avec image de fond,
+         parallax et texte centré
+         ======================================== -->
+    <section class="hero" id="hero">
+
+      <!-- Image de fond (placeholder pour l'instant) -->
+      <div class="hero__bg" id="heroBg"></div>
+
+      <!-- Overlay sombre pour lisibilité du texte -->
+      <div class="hero__overlay"></div>
+
+      <!-- Contenu centré -->
+      <div class="hero__content">
+        <p class="hero__edition">37ᵉ édition</p>
+        <h1 class="hero__title">
+          SEMI-MARATHON<br>
+          <span class="hero__title-accent">CANCALE</span>
+          <span class="hero__title-accent">SAINT-MALO</span>
+        </h1>
+        <p class="hero__date">Dimanche 23 août 2026</p>
+        <p class="hero__subtitle">
+          21,1 km · Côte d'Émeraude · 7 000 coureurs
+        </p>
+
+        <!-- Boutons d'action -->
+        <div class="hero__actions">
+          <a href="/src/pages/inscriptions-individuelles.html" class="btn btn--primary">
+            Je m'inscris
+          </a>
+          <a href="/src/pages/parcours.html" class="btn btn--outline">
+            Découvrir le parcours
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator animé -->
+      <div class="hero__scroll-indicator">
+        <span>Défiler</span>
+        <div class="hero__scroll-arrow"></div>
+      </div>
+
+    </section>
+
+    <!-- ========================================
+         STATS : bande de chiffres clés
+         ======================================== -->
+    <section class="stats">
+      <div class="stats__container">
+        <div class="stats__item">
+          <span class="stats__number" data-target="7000">0</span>
+          <span class="stats__label">Coureurs</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">21,1</span>
+          <span class="stats__label">Kilomètres</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">37</span>
+          <span class="stats__label">Éditions</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">+166</span>
+          <span class="stats__label">Mètres D+</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         PRÉSENTATION : section texte + image
+         ======================================== -->
+    <section class="presentation section">
+      <div class="presentation__container container">
+
+        <div class="presentation__text" data-animate="fade-left">
+          <span class="section__tag">L'événement</span>
+          <h2 class="section__title">L'un des plus beaux semi-marathons de France</h2>
+          <p>Le Semi Cancale Saint-Malo va célébrer sa <strong>37ᵉ édition</strong> le dimanche 23 août 2026. Classé parmi les plus beaux parcours de France, il réunit chaque année des milliers de coureurs passionnés.</p>
+          <p>Le parcours longe les <strong>paysages spectaculaires de la Côte d'Émeraude</strong>, de Cancale à Saint-Malo, en passant par Saint-Coulomb. Une expérience unique, exigeante et inoubliable.</p>
+          <ul class="presentation__badges">
+            <li class="badge">🥉 Label Bronze FFA</li>
+            <li class="badge">🌊 Côte d'Émeraude</li>
+            <li class="badge">🏆 37ᵉ édition</li>
+          </ul>
+        </div>
+
+        <div class="presentation__image" data-animate="fade-right">
+          <!-- Placeholder image - à remplacer par une vraie photo -->
+          <img 
+            src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=800&q=80" 
+            alt="Coureurs sur la Côte d'Émeraude"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         INSCRIPTIONS : dates et CTA
+         ======================================== -->
+    <section class="inscriptions section section--dark">
+      <div class="container">
+        <span class="section__tag section__tag--light">Inscriptions 2026</span>
+        <h2 class="section__title section__title--light">Réserve ta place</h2>
+
+        <div class="inscriptions__grid">
+
+          <div class="inscriptions__card" data-animate="fade-up">
+            <div class="inscriptions__icon">🏃</div>
+            <h3>Challenge Individuel</h3>
+            <p class="inscriptions__date-label">Ouverture des inscriptions</p>
+            <p class="inscriptions__date">Vendredi 20 mars à 19h</p>
+            <p>Via la plateforme NextRun</p>
+            <a href="/src/pages/inscriptions-individuelles.html" class="btn btn--primary">
+              S'inscrire
+            </a>
+          </div>
+
+          <div class="inscriptions__card" data-animate="fade-up" style="animation-delay: 0.15s">
+            <div class="inscriptions__icon">🏢</div>
+            <h3>Challenge Entreprises</h3>
+            <p class="inscriptions__date-label">Ouverture des inscriptions</p>
+            <p class="inscriptions__date">Mardi 17 mars à 10h</p>
+            <p>Équipes de 4 coureurs · 200€</p>
+            <a href="/src/pages/challenge-entreprises.html" class="btn btn--primary">
+              Inscrire mon équipe
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         PARCOURS : aperçu visuel
+         ======================================== -->
+    <section class="parcours-apercu section">
+      <div class="container">
+        <span class="section__tag">Le parcours</span>
+        <h2 class="section__title">Cancale → Saint-Malo</h2>
+
+        <div class="parcours-apercu__grid">
+
+          <!-- Étapes du parcours -->
+          <div class="parcours-apercu__steps" data-animate="fade-left">
+            <div class="step">
+              <div class="step__dot step__dot--start"></div>
+              <div class="step__content">
+                <strong>Départ — Cancale</strong>
+                <span>Avenue de Scissy · 8h00</span>
+              </div>
+            </div>
+            <div class="step__line"></div>
+            <div class="step">
+              <div class="step__dot"></div>
+              <div class="step__content">
+                <strong>Côte du Guesclin</strong>
+                <span>km 9 — premier dénivelé majeur</span>
+              </div>
+            </div>
+            <div class="step__line"></div>
+            <div class="step">
+              <div class="step__dot"></div>
+              <div class="step__content">
+                <strong>Saint-Coulomb</strong>
+                <span>km 11 — ravitaillement</span>
+              </div>
+            </div>
+            <div class="step__line"></div>
+            <div class="step">
+              <div class="step__dot"></div>
+              <div class="step__content">
+                <strong>Côte du Lupin</strong>
+                <span>km 13 — vue sur la mer</span>
+              </div>
+            </div>
+            <div class="step__line"></div>
+            <div class="step">
+              <div class="step__dot step__dot--end"></div>
+              <div class="step__content">
+                <strong>Arrivée — Saint-Malo</strong>
+                <span>Esplanade Saint-Vincent · Remparts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image parcours -->
+          <div class="parcours-apercu__image" data-animate="fade-right">
+            <img 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" 
+              alt="Vue aérienne Côte d'Émeraude"
+              loading="lazy"
+            />
+            <a href="/src/pages/parcours.html" class="btn btn--primary parcours-apercu__btn">
+              Voir le parcours complet
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         PARTENAIRES
+         ======================================== -->
+    <section class="partenaires section section--gray">
+      <div class="container">
+        <span class="section__tag">Ils nous soutiennent</span>
+        <h2 class="section__title">Nos partenaires</h2>
+
+        <!-- Partenaires Club (les plus importants) -->
+        <p class="partenaires__tier-label">Partenaires Club</p>
+        <div class="partenaires__grid partenaires__grid--club">
+          <div class="partenaire-logo">Logo partenaire 1</div>
+          <div class="partenaire-logo">Logo partenaire 2</div>
+          <div class="partenaire-logo">Logo partenaire 3</div>
+        </div>
+
+        <!-- Partenaires Prestige -->
+        <p class="partenaires__tier-label">Partenaires Prestige</p>
+        <div class="partenaires__grid partenaires__grid--prestige">
+          <div class="partenaire-logo">Logo partenaire 4</div>
+          <div class="partenaire-logo">Logo partenaire 5</div>
+          <div class="partenaire-logo">Logo partenaire 6</div>
+          <div class="partenaire-logo">Logo partenaire 7</div>
+        </div>
+
+        <!-- Partenaires Performance -->
+        <p class="partenaires__tier-label">Partenaires Performance</p>
+        <div class="partenaires__grid partenaires__grid--performance">
+          <div class="partenaire-logo">Logo partenaire 8</div>
+          <div class="partenaire-logo">Logo partenaire 9</div>
+          <div class="partenaire-logo">Logo partenaire 10</div>
+          <div class="partenaire-logo">Logo partenaire 11</div>
+          <div class="partenaire-logo">Logo partenaire 12</div>
+        </div>
+
+        <!-- Partenaires Essentiels -->
+        <p class="partenaires__tier-label">Partenaires Essentiels</p>
+        <div class="partenaires__grid partenaires__grid--essentiels">
+          <div class="partenaire-logo">Logo 13</div>
+          <div class="partenaire-logo">Logo 14</div>
+          <div class="partenaire-logo">Logo 15</div>
+          <div class="partenaire-logo">Logo 16</div>
+          <div class="partenaire-logo">Logo 17</div>
+          <div class="partenaire-logo">Logo 18</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="footer">
+      <div class="footer__container container">
+
+        <div class="footer__brand">
+          <p class="footer__logo">SEMI <span>CSM</span> 2026</p>
+          <p>23 août 2026 · Côte d'Émeraude</p>
+          <p>Contact : <a href="mailto:semi@cancalestmalo.fr">semi@cancalestmalo.fr</a></p>
+        </div>
+
+        <div class="footer__links">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="/src/pages/parcours.html">Parcours</a></li>
+            <li><a href="/src/pages/parking.html">Parking</a></li>
+            <li><a href="/src/pages/navettes.html">Navettes</a></li>
+            <li><a href="/src/pages/dossards.html">Dossards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__links">
+          <h4>Résultats</h4>
+          <ul>
+            <li><a href="/src/pages/resultats.html">Résultats</a></li>
+            <li><a href="/src/pages/classements.html">Classements</a></li>
+            <li><a href="/src/pages/photos-videos.html">Photos & Vidéos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__links">
+          <h4>Participer</h4>
+          <ul>
+            <li><a href="/src/pages/inscriptions-individuelles.html">S'inscrire</a></li>
+            <li><a href="/src/pages/benevoles.html">Devenir bénévole</a></li>
+            <li><a href="/src/pages/engagements.html">Nos engagements</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Semi-Marathon Cancale Saint-Malo · Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

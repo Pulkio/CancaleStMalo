@@ -1,0 +1,201 @@
+/* =============================================
+   navbar.css
+   Navigation principale, dropdown, burger.
+   Chargé sur TOUTES les pages.
+   ============================================= */
+
+/* Barre de navigation fixe en haut */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
+}
+
+/* Classe ajoutée par JS quand on scrolle vers le bas */
+.navbar--scrolled {
+  background: var(--color-dark);
+  padding: 0.6rem 0;
+  box-shadow: var(--shadow-md);
+}
+
+.navbar__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+.navbar__logo-accent { color: var(--color-primary); font-size: 1.6rem; }
+.navbar__logo-year   { font-size: 0.9rem; opacity: 0.7; font-weight: 400; }
+
+/* Menu principal (liste horizontale sur desktop) */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+/* Lien de navigation */
+.navbar__link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.85rem;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  transition: color var(--transition), background var(--transition);
+}
+.navbar__link:hover { color: var(--color-white); background: rgba(255,255,255,0.08); }
+
+/* Flèche du dropdown */
+.navbar__arrow {
+  font-size: 0.75rem;
+  transition: transform var(--transition);
+}
+.navbar__item--dropdown:hover .navbar__arrow { transform: rotate(180deg); }
+
+/* Bouton CTA dans la navbar */
+.navbar__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.3rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background var(--transition), transform var(--transition);
+  margin-left: 0.5rem;
+}
+.navbar__cta:hover { background: #2d8a93; transform: translateY(-1px); }
+
+/* ---- Dropdown ---- */
+.navbar__item--dropdown { position: relative; }
+
+/* "Pont invisible" : évite que le dropdown ferme 
+   quand la souris passe de l'item au menu */
+.navbar__item--dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 12px; /* ← pont entre le lien et le dropdown */
+}
+
+/* Menu déroulant */
+.navbar__dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 220px;
+  background: var(--color-dark);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  list-style: none;
+  padding: 0.5rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+/* Affichage au survol */
+.navbar__item--dropdown:hover .navbar__dropdown {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+/* Liens du dropdown */
+.navbar__dropdown li a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  color: rgba(255,255,255,0.82);
+  font-size: 0.88rem;
+  transition: background var(--transition), color var(--transition);
+}
+.navbar__dropdown li a:hover {
+  background: rgba(63,170,180,0.15);
+  color: var(--color-primary);
+}
+
+/* ---- Burger (caché sur desktop) ---- */
+.navbar__burger {
+  display: none; /* affiché en mobile via media query */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+.navbar__burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+/* Animation burger → croix quand menu ouvert */
+.navbar__burger--active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar__burger--active span:nth-child(2) { opacity: 0; }
+.navbar__burger--active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---- Responsive mobile ---- */
+@media (max-width: 900px) {
+
+  .navbar__burger { display: flex; }
+
+  /* Menu en plein écran sur mobile */
+  .navbar__menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--color-dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 999;
+  }
+
+  /* JS ajoute cette classe pour ouvrir le menu */
+  .navbar__menu--open { display: flex; }
+
+  .navbar__link { font-size: 1.2rem; padding: 0.75rem 1.5rem; }
+
+  /* Dropdowns statiques sur mobile */
+  .navbar__item--dropdown::after { display: none; }
+  .navbar__dropdown {
+    display: block;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+    padding: 0;
+    text-align: center;
+  }
+  .navbar__dropdown li a { font-size: 1rem; padding: 0.4rem 1rem; }
+}

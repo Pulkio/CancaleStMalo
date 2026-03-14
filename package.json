@@ -1,0 +1,19 @@
+{
+  "name": "cancalestmalo",
+  "version": "1.0.0",
+  "description": "Site du Semi-Marathon Cancale Saint-Malo",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pulkio/CancaleStMalo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^8.0.0"
+  }
+}
