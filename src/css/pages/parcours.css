@@ -1,0 +1,282 @@
+/* =============================================
+   parcours.css
+   ============================================= */
+
+/* ---- Stats bande ---- */
+.parcours-stats {
+  background: var(--color-dark);
+  padding: 2.5rem 0;
+}
+
+.parcours-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.parcours-stat {
+  padding: 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.parcours-stat:last-child { border-right: none; }
+
+.parcours-stat__val {
+  display: block;
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.parcours-stat__label {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---- Carte ---- */
+.parcours-map__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.parcours-map__img img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
+  max-height: 420px;
+}
+
+.parcours-map__details p {
+  color: var(--color-gray);
+  margin-bottom: 2rem;
+}
+.parcours-map__details p strong { color: var(--color-dark); }
+
+.parcours-endpoint {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.endpoint-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-gray-light);
+  border-radius: 12px;
+}
+
+.endpoint-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+.endpoint-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.endpoint-item strong {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.endpoint-item span {
+  font-size: 0.88rem;
+  color: var(--color-gray);
+}
+
+.endpoint-time {
+  font-family: var(--font-title);
+  font-size: 1.1rem !important;
+  font-weight: 700;
+  color: var(--color-primary) !important;
+}
+
+.endpoint-sub {
+  font-size: 0.82rem !important;
+  color: var(--color-gray) !important;
+}
+
+.endpoint-connector {
+  width: 2px;
+  height: 2rem;
+  background: linear-gradient(to bottom, #3faab4, #017284);
+  margin-left: 2.25rem;
+}
+
+/* ---- Étapes timeline ---- */
+.etapes__timeline {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.etapes__timeline::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 32px;
+  bottom: 32px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-secondary) 50%,
+    var(--color-primary)
+  );
+}
+
+.etape {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  position: relative;
+}
+
+.etape__marker {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 3px solid var(--color-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-gray);
+  flex-shrink: 0;
+  z-index: 1;
+  box-shadow: var(--shadow-sm);
+}
+
+.etape__marker--start {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.etape__marker--end {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.etape__marker--ravito {
+  background: rgba(63, 170, 180, 0.1);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.etape__content {
+  padding: 0.5rem 0;
+  flex: 1;
+}
+
+.etape__city-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.15rem 0.6rem;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 50px;
+  margin-bottom: 0.4rem;
+}
+
+.etape__ravito-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.15rem 0.6rem;
+  background: rgba(63, 170, 180, 0.12);
+  color: var(--color-primary);
+  border-radius: 50px;
+  margin-top: 0.4rem;
+}
+
+.etape__content h3 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.etape__content p {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+/* ---- Infos course ---- */
+.infos-course__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.infos-block__title {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.infos-block__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.infos-block__list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(63, 170, 180, 0.1);
+  font-size: 0.95rem;
+}
+.infos-block__list li:last-child { border-bottom: none; }
+
+.infos-km {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  min-width: 55px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1000px) {
+  .parcours-stats__grid { grid-template-columns: repeat(2, 1fr); }
+  .parcours-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .parcours-stat:nth-child(2n) { border-bottom: none; }
+}
+
+@media (max-width: 900px) {
+  .parcours-map__inner   { grid-template-columns: 1fr; }
+  .infos-course__grid    { grid-template-columns: 1fr; }
+  .etapes__timeline::before { left: 23px; }
+}
+
+@media (max-width: 480px) {
+  .parcours-stats__grid { grid-template-columns: 1fr 1fr; }
+}

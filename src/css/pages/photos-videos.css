@@ -1,0 +1,199 @@
+/* =============================================
+   photos-videos.css
+   ============================================= */
+
+/* ---- Galerie ---- */
+.galerie__intro {
+  color: var(--color-gray);
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+  max-width: 700px;
+}
+
+/* Codes d'accès */
+.galerie__access {
+  background: var(--color-gray-light);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.galerie__access h3 {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.access-codes {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.access-code {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-white);
+  border: 1px solid rgba(63, 170, 180, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+.access-code__icon { font-size: 1.5rem; flex-shrink: 0; }
+
+.access-code div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.access-code strong { font-size: 0.88rem; font-weight: 600; }
+
+.access-code__code {
+  font-family: 'Courier New', monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+}
+
+.access-code__copy {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  flex-shrink: 0;
+}
+.access-code__copy:hover {
+  background: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+/* Grille photos */
+.galerie__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.galerie__placeholder {
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 4 / 3;
+}
+.galerie__placeholder--tall {
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+
+.galerie__placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.galerie__placeholder:hover img {
+  transform: scale(1.04);
+}
+
+.galerie__credit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-gray);
+}
+.galerie__credit a { color: var(--color-primary); font-weight: 500; }
+.galerie__credit a:hover { text-decoration: underline; }
+
+/* ---- Vidéos ---- */
+.videos__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.video-placeholder {
+  background: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(63, 170, 180, 0.15);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.video-placeholder:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.video-placeholder__thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-placeholder__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.video-placeholder:hover .video-placeholder__thumb img {
+  transform: scale(1.05);
+}
+
+.video-placeholder__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 43, 48, 0.45);
+  font-size: 3rem;
+  color: var(--color-white);
+  transition: background var(--transition);
+}
+.video-placeholder:hover .video-placeholder__play {
+  background: rgba(13, 43, 48, 0.6);
+}
+
+.video-placeholder__info {
+  padding: 1.5rem;
+}
+
+.video-placeholder__info h3 {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.video-placeholder__info p {
+  font-size: 0.88rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .galerie__grid  { grid-template-columns: 1fr 1fr; }
+  .galerie__placeholder--tall { grid-row: span 1; aspect-ratio: 4 / 3; }
+  .videos__grid   { grid-template-columns: 1fr; }
+  .access-codes   { flex-direction: column; }
+}
+
+@media (max-width: 600px) {
+  .galerie__grid { grid-template-columns: 1fr; }
+}

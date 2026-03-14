@@ -1,0 +1,140 @@
+/* =============================================
+   retours-coureurs.css
+   ============================================= */
+
+/* ---- Intro ---- */
+.retours-intro__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 3rem;
+}
+
+.retours-intro__stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.retours-stat {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(63, 170, 180, 0.3);
+  border-radius: 14px;
+}
+
+.retours-stat__val {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.retours-stat__label {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.4rem;
+}
+
+/* ---- Témoignages ---- */
+.temoignages__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.temoignage-card {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(63, 170, 180, 0.15);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.temoignage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.temoignage-card__stars {
+  color: #f59e0b;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.temoignage-card blockquote {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--color-dark);
+  font-style: italic;
+  flex: 1;
+  position: relative;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--color-primary);
+}
+
+.temoignage-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.temoignage-card__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.temoignage-card__author strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.temoignage-card__author span {
+  font-size: 0.78rem;
+  color: var(--color-gray);
+}
+
+/* ---- CTA ---- */
+.retours-cta__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 3rem;
+}
+.retours-cta__inner p {
+  color: var(--color-gray);
+  margin-top: 0.5rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1100px) {
+  .temoignages__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+  .retours-intro__inner { grid-template-columns: 1fr; gap: 2rem; }
+  .retours-intro__stats { justify-content: center; }
+  .retours-cta__inner   { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .temoignages__grid { grid-template-columns: 1fr; }
+  .retours-intro__stats { flex-direction: column; }
+}

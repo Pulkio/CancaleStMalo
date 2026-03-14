@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Retours coureurs du Semi-Marathon Cancale Saint-Malo – Témoignages et avis des participants." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Retours Coureurs – Semi-Marathon Cancale Saint-Malo 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/components/navbar.css" />
+    <link rel="stylesheet" href="/src/css/components/footer.css" />
+    <link rel="stylesheet" href="/src/css/pages/page-hero.css" />
+    <link rel="stylesheet" href="/src/css/pages/retours-coureurs.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__logo">
+          <img src="/src/assets/logo.png" alt="Semi-Marathon Cancale Saint-Malo 2026" class="navbar__logo-img" loading="eager" />
+        </a>
+        <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__menu" id="navMenu">
+          <li class="navbar__item"><a href="/" class="navbar__link">Accueil</a></li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">S'inscrire <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/inscriptions-individuelles.html">Inscriptions individuelles</a></li>
+              <li><a href="/src/pages/challenge-entreprises.html">Challenge entreprises</a></li>
+              <li><a href="/src/pages/dossards.html">Dossards</a></li>
+              <li><a href="/src/pages/dossards.html#justificatifs">Justificatifs d'inscription</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Info course <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/parcours.html">Parcours</a></li>
+              <li><a href="/src/pages/parking.html">Parking</a></li>
+              <li><a href="/src/pages/navettes.html">Navettes</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Résultats <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/resultats.html">Résultats</a></li>
+              <li><a href="/src/pages/classements.html">Classements & Récompenses</a></li>
+              <li><a href="/src/pages/retours-coureurs.html">Retours coureurs</a></li>
+              <li><a href="/src/pages/photos-videos.html">Photos & Vidéos</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Engagements <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/engagements.html">Nos engagements</a></li>
+              <li><a href="/src/pages/benevoles.html">Devenir bénévole</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item">
+            <a href="/src/pages/inscriptions-individuelles.html" class="navbar__cta">Je m'inscris</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg"></div>
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content container">
+        <span class="page-hero__tag">Résultats</span>
+        <h1 class="page-hero__title">Retours Coureurs</h1>
+        <p class="page-hero__subtitle">Ils l'ont couru, ils en parlent</p>
+        <div class="page-hero__breadcrumb">
+          <a href="/">Accueil</a><span class="sep">›</span><span>Résultats</span><span class="sep">›</span><span>Retours coureurs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         INTRO
+         ======================================== -->
+    <section class="retours-intro section section--dark">
+      <div class="container retours-intro__inner">
+        <div data-animate="fade-left">
+          <span class="section__tag section__tag--light">Ce qu'ils en disent</span>
+          <h2 class="section__title section__title--light">L'émotion racontée par les coureurs</h2>
+          <p style="color: rgba(255,255,255,0.78);">Le Semi-Marathon Cancale Saint-Malo est l'une des courses les plus appréciées de Bretagne. Chaque année, des milliers de coureurs partagent leurs impressions sur cet événement exceptionnel.</p>
+        </div>
+        <div class="retours-intro__stats" data-animate="fade-right">
+          <div class="retours-stat">
+            <span class="retours-stat__val">4.8/5</span>
+            <span class="retours-stat__label">Note moyenne</span>
+          </div>
+          <div class="retours-stat">
+            <span class="retours-stat__val">98%</span>
+            <span class="retours-stat__label">Recommandent la course</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         TÉMOIGNAGES
+         ======================================== -->
+    <section class="temoignages section">
+      <div class="container">
+        <span class="section__tag">Témoignages</span>
+        <h2 class="section__title">Ils témoignent</h2>
+
+        <div class="temoignages__grid">
+
+          <div class="temoignage-card" data-animate="fade-up">
+            <div class="temoignage-card__stars">★★★★★</div>
+            <blockquote>
+              "Un parcours absolument magnifique le long de la Côte d'Émeraude. La vue depuis la Pointe du Grouin est à couper le souffle. Je reviendrai sans hésiter !"
+            </blockquote>
+            <div class="temoignage-card__author">
+              <div class="temoignage-card__avatar">S</div>
+              <div>
+                <strong>Sophie D.</strong>
+                <span>Édition 2025 · Finisher en 1h52</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="temoignage-card" data-animate="fade-up" style="animation-delay:0.1s">
+            <div class="temoignage-card__stars">★★★★★</div>
+            <blockquote>
+              "La meilleure ambiance de toutes les courses que j'ai faites. Le public tout le long du parcours, les bénévoles au top, l'arrivée aux remparts de Saint-Malo… Magique !"
+            </blockquote>
+            <div class="temoignage-card__author">
+              <div class="temoignage-card__avatar">T</div>
+              <div>
+                <strong>Thomas M.</strong>
+                <span>Édition 2025 · Finisher en 1h38</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="temoignage-card" data-animate="fade-up" style="animation-delay:0.2s">
+            <div class="temoignage-card__stars">★★★★★</div>
+            <blockquote>
+              "Ma 5ᵉ participation et toujours la même émotion. Le Semi Cancale Saint-Malo c'est une course à part, avec une âme unique. Organisation au top, bravo à toute l'équipe !"
+            </blockquote>
+            <div class="temoignage-card__author">
+              <div class="temoignage-card__avatar">M</div>
+              <div>
+                <strong>Marie L.</strong>
+                <span>5ᵉ participation · Édition 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="temoignage-card" data-animate="fade-up" style="animation-delay:0.3s">
+            <div class="temoignage-card__stars">★★★★☆</div>
+            <blockquote>
+              "Un parcours exigeant avec des côtes qui font mal, mais quel paysage ! La descente sur Saint-Malo avec les remparts en ligne de mire, c'est un moment que je n'oublierai jamais."
+            </blockquote>
+            <div class="temoignage-card__author">
+              <div class="temoignage-card__avatar">J</div>
+              <div>
+                <strong>Jean-Pierre K.</strong>
+                <span>Édition 2024 · 1ère participation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="temoignage-card" data-animate="fade-up" style="animation-delay:0.1s">
+            <div class="temoignage-card__stars">★★★★★</div>
+            <blockquote>
+              "La Côte d'Émeraude offre un cadre incomparable. Les ravitaillements étaient bien organisés et les bénévoles exceptionnels. Une course que je recommande à tous les coureurs !"
+            </blockquote>
+            <div class="temoignage-card__author">
+              <div class="temoignage-card__avatar">A</div>
+              <div>
+                <strong>Anne-Sophie B.</strong>
+                <span>Édition 2025 · Finisher en 2h08</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="temoignage-card" data-animate="fade-up" style="animation-delay:0.2s">
+            <div class="temoignage-card__stars">★★★★★</div>
+            <blockquote>
+              "Notre équipe entreprise a adoré l'expérience. Le challenge était parfaitement organisé, les dossards personnalisés étaient superbes. Une belle cohésion d'équipe garantie !"
+            </blockquote>
+            <div class="temoignage-card__author">
+              <div class="temoignage-card__avatar">R</div>
+              <div>
+                <strong>Romain V.</strong>
+                <span>Challenge Entreprises · Équipe FVSP</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CTA
+         ======================================== -->
+    <section class="retours-cta section section--gray">
+      <div class="container retours-cta__inner">
+        <div data-animate="fade-left">
+          <h2 class="section__title">Vous aussi, écrivez votre histoire sur la Côte d'Émeraude</h2>
+          <p>Rejoignez les 7 000 coureurs attendus pour la 37ᵉ édition le 23 août 2026.</p>
+        </div>
+        <div data-animate="fade-right">
+          <a href="/src/pages/inscriptions-individuelles.html" class="btn btn--primary">Je m'inscris →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__brand">
+          <img src="/src/assets/logo.png" alt="Logo Semi Cancale St Malo 2026" class="footer__logo" loading="lazy" />
+          <p>23 août 2026 · Côte d'Émeraude</p>
+          <p>Contact : <a href="mailto:semi@cancalestmalo.fr">semi@cancalestmalo.fr</a></p>
+          <p>Crédit Photo : <a href="https://objectif-pro.fr">@ObjectifPro</a></p>
+        </div>
+        <div class="footer__links">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="/src/pages/parcours.html">Parcours</a></li>
+            <li><a href="/src/pages/parking.html">Parking</a></li>
+            <li><a href="/src/pages/navettes.html">Navettes</a></li>
+            <li><a href="/src/pages/dossards.html">Dossards</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Résultats</h4>
+          <ul>
+            <li><a href="/src/pages/resultats.html">Résultats</a></li>
+            <li><a href="/src/pages/classements.html">Classements</a></li>
+            <li><a href="/src/pages/photos-videos.html">Photos & Vidéos</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Participer</h4>
+          <ul>
+            <li><a href="/src/pages/inscriptions-individuelles.html">S'inscrire</a></li>
+            <li><a href="/src/pages/benevoles.html">Devenir bénévole</a></li>
+            <li><a href="/src/pages/engagements.html">Nos engagements</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Semi-Marathon Cancale Saint-Malo · Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

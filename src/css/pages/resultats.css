@@ -1,0 +1,149 @@
+/* =============================================
+   resultats.css
+   ============================================= */
+
+/* ---- Records ---- */
+.records__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.record-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(63, 170, 180, 0.3);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  transition: transform var(--transition), background var(--transition);
+}
+.record-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.record-card__category {
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.record-card__time {
+  font-family: var(--font-title);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.record-card__athlete {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 0.4rem;
+}
+
+.record-card__year {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---- Résultats dernière édition ---- */
+.resultats-edition__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.resultats-action {
+  background: var(--color-gray-light);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border: 1px solid rgba(63, 170, 180, 0.12);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.resultats-action:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.resultats-action__icon { font-size: 2.5rem; flex-shrink: 0; }
+
+.resultats-action div h3 {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.resultats-action div p {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+/* ---- Archives ---- */
+.archives__intro {
+  color: var(--color-gray);
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.archives__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.archive-item {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(63, 170, 180, 0.15);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.archive-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.archive-item__year {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.archive-item__num {
+  font-size: 0.88rem;
+  color: var(--color-gray);
+}
+
+.archive-item__link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  transition: color var(--transition);
+}
+.archive-item:hover .archive-item__link { color: var(--color-primary); }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .records__grid           { grid-template-columns: 1fr; }
+  .resultats-edition__grid { grid-template-columns: 1fr; }
+  .archives__grid          { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .archives__grid { grid-template-columns: 1fr; }
+}

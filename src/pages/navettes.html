@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Navettes du Semi-Marathon Cancale Saint-Malo 2026 – Service gratuit Saint-Malo vers Cancale le matin de la course." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Navettes – Semi-Marathon Cancale Saint-Malo 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/components/navbar.css" />
+    <link rel="stylesheet" href="/src/css/components/footer.css" />
+    <link rel="stylesheet" href="/src/css/pages/page-hero.css" />
+    <link rel="stylesheet" href="/src/css/pages/navettes.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__logo">
+          <img src="/src/assets/logo.png" alt="Semi-Marathon Cancale Saint-Malo 2026" class="navbar__logo-img" loading="eager" />
+        </a>
+        <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__menu" id="navMenu">
+          <li class="navbar__item"><a href="/" class="navbar__link">Accueil</a></li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">S'inscrire <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/inscriptions-individuelles.html">Inscriptions individuelles</a></li>
+              <li><a href="/src/pages/challenge-entreprises.html">Challenge entreprises</a></li>
+              <li><a href="/src/pages/dossards.html">Dossards</a></li>
+              <li><a href="/src/pages/dossards.html#justificatifs">Justificatifs d'inscription</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Info course <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/parcours.html">Parcours</a></li>
+              <li><a href="/src/pages/parking.html">Parking</a></li>
+              <li><a href="/src/pages/navettes.html">Navettes</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Résultats <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/resultats.html">Résultats</a></li>
+              <li><a href="/src/pages/classements.html">Classements & Récompenses</a></li>
+              <li><a href="/src/pages/retours-coureurs.html">Retours coureurs</a></li>
+              <li><a href="/src/pages/photos-videos.html">Photos & Vidéos</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Engagements <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/engagements.html">Nos engagements</a></li>
+              <li><a href="/src/pages/benevoles.html">Devenir bénévole</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item">
+            <a href="/src/pages/inscriptions-individuelles.html" class="navbar__cta">Je m'inscris</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg"></div>
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content container">
+        <span class="page-hero__tag">Info course</span>
+        <h1 class="page-hero__title">Navettes</h1>
+        <p class="page-hero__subtitle">Service gratuit · Saint-Malo → Cancale · Dimanche 23 août</p>
+        <div class="page-hero__breadcrumb">
+          <a href="/">Accueil</a><span class="sep">›</span><span>Info course</span><span class="sep">›</span><span>Navettes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         NAVETTE PRINCIPALE
+         ======================================== -->
+    <section class="navette-main section">
+      <div class="container">
+        <span class="section__tag">Service navette</span>
+        <h2 class="section__title">Navettes gratuites vers le départ</h2>
+        <p class="navette-main__intro">Pour vous permettre de rejoindre le départ à Cancale depuis Saint-Malo, un service de navettes gratuites est mis en place le matin de la course.</p>
+
+        <div class="navette-card" data-animate="fade-up">
+          <div class="navette-card__route">
+            <div class="navette-endpoint">
+              <span class="navette-endpoint__dot navette-endpoint__dot--start"></span>
+              <div>
+                <strong>Saint-Malo</strong>
+                <span>Esplanade Saint-Vincent</span>
+              </div>
+            </div>
+            <div class="navette-route__line">
+              <span class="navette-route__bus">🚌</span>
+              <div class="navette-route__track"></div>
+              <span class="navette-route__duration">~30 min</span>
+            </div>
+            <div class="navette-endpoint">
+              <span class="navette-endpoint__dot navette-endpoint__dot--end"></span>
+              <div>
+                <strong>Cancale</strong>
+                <span>Zone départ</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="navette-card__details">
+            <div class="navette-detail">
+              <span class="navette-detail__icon">🕐</span>
+              <div>
+                <strong>Horaires de départ</strong>
+                <span>De 6h00 à 7h15</span>
+              </div>
+            </div>
+            <div class="navette-detail">
+              <span class="navette-detail__icon">⏱️</span>
+              <div>
+                <strong>Durée du trajet</strong>
+                <span>Environ 30 minutes</span>
+              </div>
+            </div>
+            <div class="navette-detail">
+              <span class="navette-detail__icon">💰</span>
+              <div>
+                <strong>Tarif</strong>
+                <span class="navette-free">Gratuit</span>
+              </div>
+            </div>
+            <div class="navette-detail">
+              <span class="navette-detail__icon">📍</span>
+              <div>
+                <strong>Point de départ</strong>
+                <span>Esplanade Saint-Vincent, Saint-Malo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navette-warning" data-animate="fade-up">
+          <span class="navette-warning__icon">⚠️</span>
+          <div>
+            <strong>Aucune navette retour après la course</strong>
+            <p>Il n'y a pas de navette retour de Cancale vers Saint-Malo après la course. Prévoyez votre propre moyen de transport ou organisez votre covoiturage en amont.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CONSEILS
+         ======================================== -->
+    <section class="navette-conseils section section--gray">
+      <div class="container">
+        <span class="section__tag">Conseils logistiques</span>
+        <h2 class="section__title">Bien organiser votre journée</h2>
+
+        <div class="conseils__grid">
+          <div class="conseil-item" data-animate="fade-up">
+            <div class="conseil-item__num">1</div>
+            <h3>La veille — Retirez votre dossard</h3>
+            <p>Récupérez votre dossard le <strong>samedi 22 août (10h–19h)</strong> au Stade de Marville, Saint-Malo, pour ne pas stresser le dimanche matin.</p>
+          </div>
+          <div class="conseil-item" data-animate="fade-up" style="animation-delay:0.1s">
+            <div class="conseil-item__num">2</div>
+            <h3>Le matin — Prenez la navette</h3>
+            <p>Rejoignez l'Esplanade Saint-Vincent à Saint-Malo avant 7h15 pour prendre la navette gratuite vers Cancale. Le dernier départ est à <strong>7h15</strong>.</p>
+          </div>
+          <div class="conseil-item" data-animate="fade-up" style="animation-delay:0.2s">
+            <div class="conseil-item__num">3</div>
+            <h3>À Cancale — Déposez vos affaires</h3>
+            <p>Déposez votre sac à Cancale avant le départ. Il sera acheminé à Saint-Malo et vous attendra à l'arrivée.</p>
+          </div>
+          <div class="conseil-item" data-animate="fade-up" style="animation-delay:0.3s">
+            <div class="conseil-item__num">4</div>
+            <h3>Après la course — Retour Saint-Malo</h3>
+            <p>Prévoyez votre retour depuis Saint-Malo : covoiturage, transports en commun ou véhicule personnel stationné à Saint-Malo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__brand">
+          <img src="/src/assets/logo.png" alt="Logo Semi Cancale St Malo 2026" class="footer__logo" loading="lazy" />
+          <p>23 août 2026 · Côte d'Émeraude</p>
+          <p>Contact : <a href="mailto:semi@cancalestmalo.fr">semi@cancalestmalo.fr</a></p>
+          <p>Crédit Photo : <a href="https://objectif-pro.fr">@ObjectifPro</a></p>
+        </div>
+        <div class="footer__links">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="/src/pages/parcours.html">Parcours</a></li>
+            <li><a href="/src/pages/parking.html">Parking</a></li>
+            <li><a href="/src/pages/navettes.html">Navettes</a></li>
+            <li><a href="/src/pages/dossards.html">Dossards</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Résultats</h4>
+          <ul>
+            <li><a href="/src/pages/resultats.html">Résultats</a></li>
+            <li><a href="/src/pages/classements.html">Classements</a></li>
+            <li><a href="/src/pages/photos-videos.html">Photos & Vidéos</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Participer</h4>
+          <ul>
+            <li><a href="/src/pages/inscriptions-individuelles.html">S'inscrire</a></li>
+            <li><a href="/src/pages/benevoles.html">Devenir bénévole</a></li>
+            <li><a href="/src/pages/engagements.html">Nos engagements</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Semi-Marathon Cancale Saint-Malo · Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

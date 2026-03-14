@@ -1,0 +1,226 @@
+/* =============================================
+   challenge-entreprises.css
+   ============================================= */
+
+/* ---- Intro ---- */
+.ce-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ce-intro__text p {
+  color: var(--color-gray);
+  margin-bottom: 1rem;
+}
+.ce-intro__text p strong { color: var(--color-dark); }
+
+.ce-intro__opening {
+  background: rgba(63, 170, 180, 0.1);
+  border-left: 4px solid var(--color-primary);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95rem;
+  color: var(--color-dark) !important;
+}
+
+.ce-intro__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.ce-stat {
+  background: var(--color-gray-light);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(63, 170, 180, 0.15);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.ce-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.ce-stat:first-child {
+  grid-column: 1 / -1;
+}
+
+.ce-stat__val {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.ce-stat__label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+/* ---- Formules ---- */
+.formules__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.formule-card {
+  background: var(--color-white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 2px solid rgba(63, 170, 180, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.formule-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.formule-card--mecene {
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, rgba(63, 170, 180, 0.04) 0%, rgba(1, 114, 132, 0.06) 100%);
+}
+
+.formule-card__badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.9rem;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 50px;
+  align-self: flex-start;
+}
+.formule-card__badge--mecene {
+  background: var(--color-primary);
+}
+
+.formule-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.formule-card__amount {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  line-height: 1;
+}
+
+.formule-card__per {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+}
+
+.formule-card__reduction {
+  background: rgba(63, 170, 180, 0.1);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.reduction-highlight {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-secondary);
+}
+
+.reduction-sub {
+  font-size: 0.82rem;
+  color: var(--color-gray);
+}
+
+.formule-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.formule-card__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--color-dark);
+  line-height: 1.5;
+}
+
+.feature-check {
+  color: var(--color-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* ---- Infos pratiques ---- */
+.ce-infos__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.ce-info-item {
+  background: var(--color-gray-light);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(63, 170, 180, 0.12);
+}
+
+.ce-info-item__icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.ce-info-item h3 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.ce-info-item p {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+.ce-info-item p strong { color: var(--color-dark); }
+.ce-info-item a { color: var(--color-primary); font-weight: 500; }
+.ce-info-item a:hover { text-decoration: underline; }
+
+/* ---- Responsive ---- */
+@media (max-width: 1100px) {
+  .ce-infos__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+  .ce-intro__grid  { grid-template-columns: 1fr; gap: 2.5rem; }
+  .ce-intro__stats { grid-template-columns: 1fr 1fr; }
+  .ce-intro__stats .ce-stat:first-child { grid-column: 1 / -1; }
+  .formules__grid  { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .ce-infos__grid { grid-template-columns: 1fr; }
+}

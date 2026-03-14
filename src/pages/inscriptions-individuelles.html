@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Inscriptions individuelles – Semi-Marathon Cancale Saint-Malo 2026. Vagues de départ, temps limite, bourse aux dossards." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Inscriptions Individuelles – Semi-Marathon Cancale Saint-Malo 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/components/navbar.css" />
+    <link rel="stylesheet" href="/src/css/components/footer.css" />
+    <link rel="stylesheet" href="/src/css/pages/page-hero.css" />
+    <link rel="stylesheet" href="/src/css/pages/inscriptions-individuelles.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__logo">
+          <img src="/src/assets/logo.png" alt="Semi-Marathon Cancale Saint-Malo 2026" class="navbar__logo-img" loading="eager" />
+        </a>
+        <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__menu" id="navMenu">
+          <li class="navbar__item"><a href="/" class="navbar__link">Accueil</a></li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">S'inscrire <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/inscriptions-individuelles.html">Inscriptions individuelles</a></li>
+              <li><a href="/src/pages/challenge-entreprises.html">Challenge entreprises</a></li>
+              <li><a href="/src/pages/dossards.html">Dossards</a></li>
+              <li><a href="/src/pages/dossards.html#justificatifs">Justificatifs d'inscription</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Info course <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/parcours.html">Parcours</a></li>
+              <li><a href="/src/pages/parking.html">Parking</a></li>
+              <li><a href="/src/pages/navettes.html">Navettes</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Résultats <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/resultats.html">Résultats</a></li>
+              <li><a href="/src/pages/classements.html">Classements & Récompenses</a></li>
+              <li><a href="/src/pages/retours-coureurs.html">Retours coureurs</a></li>
+              <li><a href="/src/pages/photos-videos.html">Photos & Vidéos</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Engagements <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/engagements.html">Nos engagements</a></li>
+              <li><a href="/src/pages/benevoles.html">Devenir bénévole</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item">
+            <a href="/src/pages/inscriptions-individuelles.html" class="navbar__cta">Je m'inscris</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg"></div>
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content container">
+        <span class="page-hero__tag">S'inscrire</span>
+        <h1 class="page-hero__title">Inscriptions Individuelles</h1>
+        <p class="page-hero__subtitle">37ᵉ édition · Dimanche 23 août 2026 · 7 000 coureurs</p>
+        <div class="page-hero__breadcrumb">
+          <a href="/">Accueil</a><span class="sep">›</span><span>S'inscrire</span><span class="sep">›</span><span>Inscriptions individuelles</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CTA INSCRIPTION
+         ======================================== -->
+    <section class="insc-cta section section--dark">
+      <div class="container insc-cta__inner">
+        <div class="insc-cta__text" data-animate="fade-left">
+          <span class="section__tag section__tag--light">Ouverture des inscriptions</span>
+          <h2 class="section__title section__title--light">Vendredi 20 mars à 19h</h2>
+          <p>Les inscriptions individuelles pour le Semi-Marathon Cancale Saint-Malo 2026 ouvrent le <strong>vendredi 20 mars à 19h</strong> sur la plateforme NextRun.</p>
+          <p>Réserve ta place dès l'ouverture — les 7 000 dossards partent vite !</p>
+        </div>
+        <div class="insc-cta__action" data-animate="fade-right">
+          <a href="https://nextrun.fr/e/Semi-marathon-Cancale-Saint-Malo-2026"
+             class="btn btn--nextrun"
+             target="_blank" rel="noopener noreferrer">
+            S'inscrire sur NextRun ↗
+          </a>
+          <p class="insc-cta__note">Inscriptions uniquement via NextRun</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         VAGUES DE DÉPART
+         ======================================== -->
+    <section class="vagues section">
+      <div class="container">
+        <span class="section__tag">Organisation du départ</span>
+        <h2 class="section__title">Vagues de départ</h2>
+        <p class="vagues__intro">Le départ est organisé en 8 vagues selon les chronos estimés. Les horaires sont indicatifs.</p>
+
+        <div class="vagues__grid">
+
+          <div class="vague-card vague-card--elite" data-animate="fade-up">
+            <div class="vague-card__header">
+              <span class="vague-card__num">Vague 1</span>
+              <span class="vague-card__heure">8h00</span>
+            </div>
+            <div class="vague-card__body">
+              <div class="vague-card__tag vague-card__tag--elite">Élite &amp; Préférentiels</div>
+              <ul>
+                <li><span class="vague-dot"></span>Élite : &lt; 1h20</li>
+                <li><span class="vague-dot"></span>Préférentiels : &lt; 1h30</li>
+                <li><span class="vague-dot"></span>Confirmés : &lt; 1h40</li>
+              </ul>
+              <span class="vague-card__info">~1 200 coureurs</span>
+            </div>
+          </div>
+
+          <div class="vague-card" data-animate="fade-up" style="animation-delay:0.05s">
+            <div class="vague-card__header">
+              <span class="vague-card__num">Vague 2</span>
+              <span class="vague-card__heure">8h10</span>
+            </div>
+            <div class="vague-card__body">
+              <ul><li><span class="vague-dot"></span>&lt; 1h47</li></ul>
+            </div>
+          </div>
+
+          <div class="vague-card" data-animate="fade-up" style="animation-delay:0.1s">
+            <div class="vague-card__header">
+              <span class="vague-card__num">Vague 3</span>
+              <span class="vague-card__heure">8h15</span>
+            </div>
+            <div class="vague-card__body">
+              <ul><li><span class="vague-dot"></span>&lt; 1h53</li></ul>
+            </div>
+          </div>
+
+          <div class="vague-card" data-animate="fade-up" style="animation-delay:0.15s">
+            <div class="vague-card__header">
+              <span class="vague-card__num">Vague 4</span>
+              <span class="vague-card__heure">8h20</span>
+            </div>
+            <div class="vague-card__body">
+              <ul><li><span class="vague-dot"></span>&lt; 1h58</li></ul>
+            </div>
+          </div>
+
+          <div class="vague-card" data-animate="fade-up" style="animation-delay:0.2s">
+            <div class="vague-card__header">
+              <span class="vague-card__num">Vague 5</span>
+              <span class="vague-card__heure">8h35</span>
+            </div>
+            <div class="vague-card__body">
+              <ul><li><span class="vague-dot"></span>&lt; 2h04</li></ul>
+            </div>
+          </div>
+
+          <div class="vague-card" data-animate="fade-up" style="animation-delay:0.25s">
+            <div class="vague-card__header">
+              <span class="vague-card__num">Vague 6</span>
+              <span class="vague-card__heure">8h40</span>
+            </div>
+            <div class="vague-card__body">
+              <ul><li><span class="vague-dot"></span>&lt; 2h10</li></ul>
+            </div>
+          </div>
+
+          <div class="vague-card" data-animate="fade-up" style="animation-delay:0.3s">
+            <div class="vague-card__header">
+              <span class="vague-card__num">Vague 7</span>
+              <span class="vague-card__heure">8h45</span>
+            </div>
+            <div class="vague-card__body">
+              <ul><li><span class="vague-dot"></span>&lt; 2h20</li></ul>
+            </div>
+          </div>
+
+          <div class="vague-card" data-animate="fade-up" style="animation-delay:0.35s">
+            <div class="vague-card__header">
+              <span class="vague-card__num">Vague 8</span>
+              <span class="vague-card__heure">8h50</span>
+            </div>
+            <div class="vague-card__body">
+              <ul><li><span class="vague-dot"></span>&gt; 2h20</li></ul>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="vagues__warning">⚠️ Horaires indicatifs, susceptibles de modification.</p>
+      </div>
+    </section>
+
+    <!-- ========================================
+         TEMPS LIMITE
+         ======================================== -->
+    <section class="temps-limite section section--gray">
+      <div class="container">
+        <span class="section__tag">Réglementation</span>
+        <h2 class="section__title">Temps limite</h2>
+
+        <div class="temps-limite__grid">
+          <div class="temps-card" data-animate="fade-left">
+            <div class="temps-card__icon">🏃</div>
+            <h3>10 km</h3>
+            <p class="temps-card__time">1h20 max</p>
+            <p>Les coureurs n'ayant pas franchi le 10 km dans ce délai seront retirés de la course.</p>
+          </div>
+          <div class="temps-card" data-animate="fade-right">
+            <div class="temps-card__icon">🏁</div>
+            <h3>Arrivée</h3>
+            <p class="temps-card__time">2h45 max</p>
+            <p>Temps maximum pour terminer la course. Au-delà, le dossard est retiré et le coureur monte dans le véhicule balai.</p>
+          </div>
+        </div>
+
+        <div class="temps-limite__note" data-animate="fade-up">
+          <span class="note-icon">⚠️</span>
+          <p>En cas de dépassement du temps limite, le dossard est retiré et le coureur est pris en charge par le véhicule balai. Merci de respecter ces règles pour la sécurité de tous.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         BOURSE AUX DOSSARDS
+         ======================================== -->
+    <section class="bourse section">
+      <div class="container">
+        <span class="section__tag">Transfert de dossard</span>
+        <h2 class="section__title">Bourse aux dossards</h2>
+
+        <div class="bourse__grid">
+          <div class="bourse__info" data-animate="fade-left">
+            <h3>Comment ça marche ?</h3>
+            <p>Tu t'es inscrit(e) mais ne peux plus participer ? Tu peux revendre ton dossard via la plateforme NextRun.</p>
+            <ul class="bourse__list">
+              <li>
+                <span class="bourse__icon">💰</span>
+                <div>
+                  <strong>Prix de rachat</strong>
+                  <span>35 €</span>
+                </div>
+              </li>
+              <li>
+                <span class="bourse__icon">🔄</span>
+                <div>
+                  <strong>Plateforme</strong>
+                  <span>Revente uniquement via NextRun</span>
+                </div>
+              </li>
+              <li>
+                <span class="bourse__icon">💳</span>
+                <div>
+                  <strong>Remboursement</strong>
+                  <span>Hors frais de gestion NextRun</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="bourse__cta" data-animate="fade-right">
+            <div class="bourse__card">
+              <h3>Mettre en vente</h3>
+              <p>Connecte-toi à ton compte NextRun pour proposer ton dossard à la revente.</p>
+              <a href="https://nextrun.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+                Accéder à NextRun ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__brand">
+          <img src="/src/assets/logo.png" alt="Logo Semi Cancale St Malo 2026" class="footer__logo" loading="lazy" />
+          <p>23 août 2026 · Côte d'Émeraude</p>
+          <p>Contact : <a href="mailto:semi@cancalestmalo.fr">semi@cancalestmalo.fr</a></p>
+          <p>Crédit Photo : <a href="https://objectif-pro.fr">@ObjectifPro</a></p>
+        </div>
+        <div class="footer__links">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="/src/pages/parcours.html">Parcours</a></li>
+            <li><a href="/src/pages/parking.html">Parking</a></li>
+            <li><a href="/src/pages/navettes.html">Navettes</a></li>
+            <li><a href="/src/pages/dossards.html">Dossards</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Résultats</h4>
+          <ul>
+            <li><a href="/src/pages/resultats.html">Résultats</a></li>
+            <li><a href="/src/pages/classements.html">Classements</a></li>
+            <li><a href="/src/pages/photos-videos.html">Photos & Vidéos</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Participer</h4>
+          <ul>
+            <li><a href="/src/pages/inscriptions-individuelles.html">S'inscrire</a></li>
+            <li><a href="/src/pages/benevoles.html">Devenir bénévole</a></li>
+            <li><a href="/src/pages/engagements.html">Nos engagements</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Semi-Marathon Cancale Saint-Malo · Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
