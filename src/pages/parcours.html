@@ -24,6 +24,12 @@
   <meta name="twitter:title"       content="Parcours – Semi-Marathon Cancale Saint-Malo 2026" />
   <meta name="twitter:description" content="Parcours du Semi-Marathon Cancale Saint-Malo 2026 – 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude." />
   <meta name="twitter:image"       content="https://semicancalestmalo.fr/assets/photo_accueil.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"    content="Parcours du Semi-Marathon Cancale Saint-Malo sur la Côte d'Émeraude" />
+  <meta name="author"              content="Semi-Marathon Cancale Saint-Malo" />
+  <meta name="geo.region"          content="FR-35" />
+  <meta name="geo.placename"       content="Cancale, Ille-et-Vilaine, Bretagne" />
 
   <!-- 1. Fonts Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,6 +50,33 @@
   <link rel="stylesheet" href="/src/css/pages/page-hero.css" />
   <link rel="stylesheet" href="/src/css/pages/parcours.css" />
 
+    <!-- Données structurées JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://semicancalestmalo.fr/src/pages/parcours.html#webpage",
+          "url": "https://semicancalestmalo.fr/src/pages/parcours.html",
+          "name": "Parcours – Semi-Marathon Cancale Saint-Malo 2026",
+          "description": "Parcours du Semi-Marathon Cancale Saint-Malo 2026 – 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude.",
+          "inLanguage": "fr-FR",
+          "isPartOf": { "@id": "https://semicancalestmalo.fr/#website" },
+          "breadcrumb": { "@id": "https://semicancalestmalo.fr/src/pages/parcours.html#breadcrumb" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://semicancalestmalo.fr/src/pages/parcours.html#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://semicancalestmalo.fr/" },
+            { "@type": "ListItem", "position": 2, "name": "Info course" },
+            { "@type": "ListItem", "position": 3, "name": "Parcours", "item": "https://semicancalestmalo.fr/src/pages/parcours.html" }
+          ]
+        }
+      ]
+    }
+    </script>
 
 </head>
 

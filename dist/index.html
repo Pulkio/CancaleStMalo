@@ -10,17 +10,28 @@
     <link rel="canonical" href="https://semicancalestmalo.fr/" />
     <title>Semi-Marathon Cancale Saint-Malo 2026 | 37ème édition – 23 août</title>
 
+    <!-- Auteur & géolocalisation (SEO local Bretagne) -->
+    <meta name="author"        content="Semi-Marathon Cancale Saint-Malo" />
+    <meta name="geo.region"    content="FR-35" />
+    <meta name="geo.placename" content="Cancale, Ille-et-Vilaine, Bretagne" />
+    <meta name="geo.position"  content="48.680;-1.847" />
+    <meta name="ICBM"          content="48.680, -1.847" />
+
     <!-- Open Graph (partage Facebook, LinkedIn, WhatsApp…) -->
-    <meta property="og:type"        content="website" />
-    <meta property="og:locale"      content="fr_FR" />
-    <meta property="og:site_name"   content="Semi-Marathon Cancale Saint-Malo" />
-    <meta property="og:title"       content="Semi-Marathon Cancale Saint-Malo 2026 | 37ème édition – 23 août" />
-    <meta property="og:description" content="7000 coureurs, 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude. Inscriptions ouvertes pour la 37ème édition !" />
-    <meta property="og:url"         content="https://semicancalestmalo.fr/" />
-    <meta property="og:image"       content="https://semicancalestmalo.fr/assets/photo_accueil.jpg" />
+    <meta property="og:type"         content="website" />
+    <meta property="og:locale"       content="fr_FR" />
+    <meta property="og:site_name"    content="Semi-Marathon Cancale Saint-Malo" />
+    <meta property="og:title"        content="Semi-Marathon Cancale Saint-Malo 2026 | 37ème édition – 23 août" />
+    <meta property="og:description"  content="7000 coureurs, 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude. Inscriptions ouvertes pour la 37ème édition !" />
+    <meta property="og:url"          content="https://semicancalestmalo.fr/" />
+    <meta property="og:image"        content="https://semicancalestmalo.fr/assets/photo_accueil.jpg" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt"    content="Coureurs du Semi-Marathon Cancale Saint-Malo sur la Côte d'Émeraude" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:site"        content="@semicancalesaintmalo" />
     <meta name="twitter:title"       content="Semi-Marathon Cancale Saint-Malo 2026 | 37ème édition – 23 août" />
     <meta name="twitter:description" content="7000 coureurs, 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude. Inscriptions ouvertes !" />
     <meta name="twitter:image"       content="https://semicancalestmalo.fr/assets/photo_accueil.jpg" />
@@ -38,53 +49,110 @@
 
     <!-- Styles spécifiques à la page d'accueil uniquement -->
 
-    <!-- Données structurées JSON-LD (Google Rich Results) -->
+    <!-- Preload image hero (améliore le LCP / Core Web Vitals) -->
+    <link rel="preload" as="image" href="/assets/photo_accueil.jpg" />
+
+    <!-- Données structurées JSON-LD — graphe sémantique complet -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SportsEvent",
-      "name": "37ème Semi-Marathon Cancale Saint-Malo 2026",
-      "description": "Semi-Marathon Cancale Saint-Malo - 37ème édition - 23 août 2026 - 7000 coureurs sur la Côte d'Émeraude, de Cancale à Saint-Malo.",
-      "startDate": "2026-08-23T09:00:00+02:00",
-      "endDate": "2026-08-23T14:00:00+02:00",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "url": "https://semicancalestmalo.fr/",
-      "image": "https://semicancalestmalo.fr/assets/photo_accueil.jpg",
-      "location": {
-        "@type": "Place",
-        "name": "Cancale → Saint-Malo, Côte d'Émeraude",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Cancale",
-          "addressRegion": "Bretagne",
-          "postalCode": "35260",
-          "addressCountry": "FR"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://semicancalestmalo.fr/#website",
+          "url": "https://semicancalestmalo.fr/",
+          "name": "Semi-Marathon Cancale Saint-Malo",
+          "description": "Site officiel du Semi-Marathon Cancale Saint-Malo — le plus grand semi-marathon de Bretagne.",
+          "inLanguage": "fr-FR",
+          "publisher": { "@id": "https://semicancalestmalo.fr/#organization" }
+        },
+        {
+          "@type": "SportsOrganization",
+          "@id": "https://semicancalestmalo.fr/#organization",
+          "name": "Semi-Marathon Cancale Saint-Malo — CJF Athlétisme Saint-Malo",
+          "alternateName": "Semi CSM",
+          "url": "https://semicancalestmalo.fr/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://semicancalestmalo.fr/assets/logo.png"
+          },
+          "email": "cjfathlepro.stmalo@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saint-Malo",
+            "addressRegion": "Bretagne",
+            "postalCode": "35400",
+            "addressCountry": "FR"
+          },
+          "sameAs": [
+            "https://www.instagram.com/semicancalesaintmalo/",
+            "https://www.facebook.com/semimarathon.cancalesaintmalo",
+            "https://www.linkedin.com/showcase/semi-marathon-cancale-st-malo/",
+            "https://www.youtube.com/@semicancalest-malo7152"
+          ]
+        },
+        {
+          "@type": "SportsEvent",
+          "@id": "https://semicancalestmalo.fr/#event",
+          "name": "37ème Semi-Marathon Cancale Saint-Malo 2026",
+          "description": "Le plus grand semi-marathon de Bretagne — 37ème édition le 23 août 2026. 7000 coureurs sur 21,1 km de Cancale à Saint-Malo, le long de la Côte d'Émeraude.",
+          "startDate": "2026-08-23T09:00:00+02:00",
+          "endDate": "2026-08-23T14:00:00+02:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "url": "https://semicancalestmalo.fr/",
+          "image": "https://semicancalestmalo.fr/assets/photo_accueil.jpg",
+          "sport": "Course à pied",
+          "isAccessibleForFree": false,
+          "maximumAttendeeCapacity": 7000,
+          "location": {
+            "@type": "Place",
+            "name": "Avenue de Scissy, Cancale",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Avenue de Scissy",
+              "addressLocality": "Cancale",
+              "addressRegion": "Bretagne",
+              "postalCode": "35260",
+              "addressCountry": "FR"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 48.680,
+              "longitude": -1.847
+            }
+          },
+          "organizer": { "@id": "https://semicancalestmalo.fr/#organization" },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://semicancalestmalo.fr/src/pages/inscriptions-individuelles.html",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-03-17"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://semicancalestmalo.fr/#webpage",
+          "url": "https://semicancalestmalo.fr/",
+          "name": "Semi-Marathon Cancale Saint-Malo 2026 | 37ème édition – 23 août",
+          "description": "Site officiel du Semi-Marathon Cancale Saint-Malo 2026. Inscriptions, parcours, résultats et informations pratiques.",
+          "inLanguage": "fr-FR",
+          "isPartOf": { "@id": "https://semicancalestmalo.fr/#website" },
+          "about": { "@id": "https://semicancalestmalo.fr/#event" },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://semicancalestmalo.fr/" }
+            ]
+          }
         }
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Semi-Marathon Cancale Saint-Malo",
-        "email": "cjfathlepro.stmalo@gmail.com",
-        "sameAs": [
-          "https://www.instagram.com/semicancalesaintmalo/",
-          "https://www.facebook.com/semimarathon.cancalesaintmalo",
-          "https://www.linkedin.com/showcase/semi-marathon-cancale-st-malo/"
-        ]
-      },
-      "maximumAttendeeCapacity": 7000,
-      "offers": {
-        "@type": "Offer",
-        "url": "https://semicancalestmalo.fr/src/pages/inscriptions-individuelles.html",
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2025-01-01"
-      }
+      ]
     }
     </script>
 
     <script type="module" crossorigin src="/assets/main-BHZmDBSL.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/main-C8C0szcE.css">
-    <link rel="stylesheet" crossorigin href="/assets/main-BZiGcgRw.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-CG9TRWuq.css">
   </head>
   <body>
 

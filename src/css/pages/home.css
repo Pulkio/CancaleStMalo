@@ -650,6 +650,8 @@
 /* ---- RESPONSIVE HOME ---- */
 @media (max-width: 900px) {
 
+  .hero__scroll-indicator { display: none; }
+
   .presentation__container,
   .inscriptions__grid,
   .parcours-apercu__grid {
