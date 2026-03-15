@@ -20,7 +20,7 @@
 .hero__bg {
   position: absolute;
   inset: -10%;
-  background-image: url('/src/assets/photo_accueil.jpg');
+  background-image: url('/assets/photo_accueil.jpg');
   background-size: cover;
   background-position: center;
   will-change: transform;

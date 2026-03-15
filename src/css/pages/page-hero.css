@@ -44,7 +44,7 @@
    * Chaque page peut surcharger cette variable via style="--hero-bg: url(...)"
    * directement sur la balise <section class="page-hero">.
    */
-  background-image: var(--hero-bg, url('/src/assets/photo_accueil.jpg'));
+  background-image: var(--hero-bg, url('/assets/photo_accueil.jpg'));
   background-size: cover;
   background-position: center 40%;
   will-change: transform;

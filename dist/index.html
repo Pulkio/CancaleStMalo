@@ -3,9 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Semi-Marathon Cancale Saint-Malo - 37ème édition - 23 août 2026 - 7000 coureurs sur la Côte d'Émeraude" />
-    <link rel="icon" type="image/x-icon" href="/src/assets/icons/logoCS.ico" />
-    <title>Semi-Marathon Cancale Saint-Malo 2026</title>
+    <meta name="description" content="Semi-Marathon Cancale Saint-Malo - 37ème édition - 23 août 2026 - 7000 coureurs sur la Côte d'Émeraude. Inscriptions ouvertes !" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="semi-marathon, Cancale, Saint-Malo, course à pied, Côte d'Émeraude, 21km, running, Bretagne, 2026" />
+    <link rel="icon" type="image/x-icon" href="/assets/icons/logoCS.ico" />
+    <link rel="canonical" href="https://semicancalestmalo.fr/" />
+    <title>Semi-Marathon Cancale Saint-Malo 2026 | 37ème édition – 23 août</title>
+
+    <!-- Open Graph (partage Facebook, LinkedIn, WhatsApp…) -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:locale"      content="fr_FR" />
+    <meta property="og:site_name"   content="Semi-Marathon Cancale Saint-Malo" />
+    <meta property="og:title"       content="Semi-Marathon Cancale Saint-Malo 2026 | 37ème édition – 23 août" />
+    <meta property="og:description" content="7000 coureurs, 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude. Inscriptions ouvertes pour la 37ème édition !" />
+    <meta property="og:url"         content="https://semicancalestmalo.fr/" />
+    <meta property="og:image"       content="https://semicancalestmalo.fr/assets/photo_accueil.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Semi-Marathon Cancale Saint-Malo 2026 | 37ème édition – 23 août" />
+    <meta name="twitter:description" content="7000 coureurs, 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude. Inscriptions ouvertes !" />
+    <meta name="twitter:image"       content="https://semicancalestmalo.fr/assets/photo_accueil.jpg" />
 
     <!-- Google Fonts : Inter pour le texte, Oswald pour les titres sportifs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +38,53 @@
 
     <!-- Styles spécifiques à la page d'accueil uniquement -->
 
-    <script type="module" crossorigin src="/assets/index-Df_FBzkp.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-NTn82Yny.css">
+    <!-- Données structurées JSON-LD (Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsEvent",
+      "name": "37ème Semi-Marathon Cancale Saint-Malo 2026",
+      "description": "Semi-Marathon Cancale Saint-Malo - 37ème édition - 23 août 2026 - 7000 coureurs sur la Côte d'Émeraude, de Cancale à Saint-Malo.",
+      "startDate": "2026-08-23T09:00:00+02:00",
+      "endDate": "2026-08-23T14:00:00+02:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "url": "https://semicancalestmalo.fr/",
+      "image": "https://semicancalestmalo.fr/assets/photo_accueil.jpg",
+      "location": {
+        "@type": "Place",
+        "name": "Cancale → Saint-Malo, Côte d'Émeraude",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cancale",
+          "addressRegion": "Bretagne",
+          "postalCode": "35260",
+          "addressCountry": "FR"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Semi-Marathon Cancale Saint-Malo",
+        "email": "cjfathlepro.stmalo@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/semicancalesaintmalo/",
+          "https://www.facebook.com/semimarathon.cancalesaintmalo",
+          "https://www.linkedin.com/showcase/semi-marathon-cancale-st-malo/"
+        ]
+      },
+      "maximumAttendeeCapacity": 7000,
+      "offers": {
+        "@type": "Offer",
+        "url": "https://semicancalestmalo.fr/src/pages/inscriptions-individuelles.html",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-01-01"
+      }
+    }
+    </script>
+
+    <script type="module" crossorigin src="/assets/main-BHZmDBSL.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-C8C0szcE.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-BZiGcgRw.css">
   </head>
   <body>
 
@@ -35,7 +98,7 @@
         <!-- Logo -->
         <a href="/" class="navbar__logo">
           <img 
-            src="/assets/logo-BxIxoCKM.png" 
+            src="/assets/logo.png" 
             alt="Semi-Marathon Cancale Saint-Malo 2026"
             class="navbar__logo-img"
             loading="eager"
@@ -211,7 +274,7 @@
         <div class="presentation__image" data-animate="fade-right">
           <!-- Placeholder image - à remplacer par une vraie photo -->
           <img 
-            src="/assets/Affiche_Label-BT95Xp7w.png" 
+            src="/assets/Affiche_Label.png" 
             alt="Coureurs sur la Côte d'Émeraude"
             loading="lazy"
           />
@@ -397,7 +460,7 @@
         <!-- Image parcours -->
         <div class="parcours-apercu__image" data-animate="fade-right">
             <img 
-            src="/assets/parcours-CMXPcf4j.jpg" 
+            src="/assets/parcours.jpg" 
             alt="Vue aérienne Côte d'Émeraude"
             loading="lazy"
             />
@@ -408,6 +471,68 @@
 
             </div>
         </div>
+    </section>
+
+    <!-- ========================================
+         PARTENAIRES ENTREPRISES
+         ======================================== -->
+    <section class="partenaires-pro section section--dark">
+      <div class="container">
+        <div class="partenaires-pro__inner">
+
+          <!-- Pitch gauche -->
+          <div class="partenaires-pro__pitch" data-animate="fade-left">
+            <span class="section__tag section__tag--light">Partenariats entreprises</span>
+            <h2 class="section__title section__title--light">Associez votre marque au plus grand semi-marathon de Bretagne</h2>
+            <p>7 000 coureurs, un salon de retrait des dossards incontournable, une notoriété régionale de 37 ans… Le Semi-Marathon Cancale Saint-Malo offre à vos partenaires une visibilité unique sur un public actif, local et engagé.</p>
+            <div class="partenaires-pro__ctas">
+              <a href="mailto:cjfathlepro.stmalo@gmail.com" class="btn btn--primary">
+                Nous contacter →
+              </a>
+              <a href="https://www.linkedin.com/showcase/semi-marathon-cancale-st-malo/"
+                 class="btn btn--outline partenaires-pro__linkedin"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+                Suivre sur LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- Arguments clés droite -->
+          <div class="partenaires-pro__args" data-animate="fade-right">
+
+            <div class="partenaires-pro__arg">
+              <span class="partenaires-pro__arg-icon">🏆</span>
+              <div>
+                <strong>N°1 en Bretagne</strong>
+                <p>Le plus grand semi-marathon breton, 37 éditions de prestige sur la Côte d'Émeraude.</p>
+              </div>
+            </div>
+
+            <div class="partenaires-pro__arg">
+              <span class="partenaires-pro__arg-icon">🎪</span>
+              <div>
+                <strong>+10 000 visiteurs au salon</strong>
+                <p>Votre stand au cœur du salon de retrait des dossards, fréquenté par plus de 10 000 personnes la veille de la course.</p>
+              </div>
+            </div>
+
+            <div class="partenaires-pro__arg">
+              <span class="partenaires-pro__arg-icon">📣</span>
+              <div>
+                <strong>Visibilité multi-supports</strong>
+                <p>Banderoles sur le parcours, réseaux sociaux et communication officielle...</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ========================================
@@ -437,9 +562,9 @@
     <div class="partenaires__grid partenaires__grid--club">
 
       <!-- Club organisateur — même niveau visuel, même grille -->
-      <a href="#"
+      <a href="https://www.cjfathletisme-saintmalo.com/"
          class="partenaire-logo"
-         style="background-image: url('/assets/Logo_CJF-DtM8HMUu.png')"
+         style="background-image: url('/assets/Logo_CJF.png')"
          aria-label="CJF Saint-Malo — Club Organisateur"
          target="_blank"
          rel="noopener noreferrer">
@@ -451,9 +576,9 @@
     <div class="partenaires__grid partenaires__grid--club">
 
       <!-- Partenaire majeur Club -->
-      <a href="#"
+      <a href="https://www.compagniedespeches.com/nos-produits-surimi/"
          class="partenaire-logo"
-         style="background-image: url('/assets/Logo_Breizh_Surimi-DnE82WdO.png')"
+         style="background-image: url('/assets/Logo_Breizh_Surimi.png')"
          aria-label="Breizh Surimi — Partenaire Majeur Club"
          target="_blank"
          rel="noopener noreferrer">
@@ -470,16 +595,16 @@
     <p class="partenaires__tier-label">Partenaires Prestige</p>
     <div class="partenaires__grid partenaires__grid--prestige">
 
-      <a href="#"
+      <a href="https://www.decathlon.fr/store-view/magasin-de-sports-saint-jouan-des-guerets-0070018400184"
          class="partenaire-logo"
-         style="background-image: url('/assets/logo%20decathlon-w96y5ZE1.png')"
+         style="background-image: url('/assets/logo%20decathlon.png')"
          aria-label="Nom du partenaire Prestige 1"
          target="_blank" rel="noopener noreferrer">
       </a>
 
-      <a href="#"
+      <a href="https://www.magasins-u.com/magasin/superu-cancale.m35363"
          class="partenaire-logo"
-         style="background-image: url('/assets/super%20u%20cancale-CxW-nZfb.jpg')"
+         style="background-image: url('/assets/super%20u%20cancale.jpg')"
          aria-label="Nom du partenaire Prestige 2"
          target="_blank" rel="noopener noreferrer">
       </a>
@@ -493,30 +618,30 @@
     <p class="partenaires__tier-label">Partenaires Performance</p>
     <div class="partenaires__grid partenaires__grid--performance">
 
-      <a href="#"
+      <a href="https://www.daniel-mouton.com/"
          class="partenaire-logo"
-         style="background-image: url('/assets/seat%20cupra-Blctyxpb.jpg')"
+         style="background-image: url('/assets/seat%20cupra.jpg')"
          aria-label="Nom du partenaire Performance 1"
          target="_blank" rel="noopener noreferrer">
       </a>
 
-      <a href="#"
+      <a href="https://www.lacancalaise.fr/"
          class="partenaire-logo"
-         style="background-image: url('/assets/logo-la_cancalaise-D1qwK3OV.png')"
+         style="background-image: url('/assets/logo-la_cancalaise.png')"
          aria-label="Nom du partenaire Performance 2"
          target="_blank" rel="noopener noreferrer">
       </a>
 
-      <a href="#"
+      <a href="https://www.kercadelac.fr/"
          class="partenaire-logo"
-         style="background-image: url('/assets/ker_cadelac-DZml6zSH.png')"
+         style="background-image: url('/assets/ker_cadelac.png')"
          aria-label="Nom du partenaire Performance 2"
          target="_blank" rel="noopener noreferrer">
       </a>
 
-      <a href="#"
+      <a href="https://www.credit-agricole.fr/ca-illeetvilaine/particulier.html"
          class="partenaire-logo"
-         style="background-image: url('/assets/ca-Ille_et_vilaine-v-RVB-DqyFUQU4.jpg')"
+         style="background-image: url('/assets/ca-Ille_et_vilaine-v-RVB.jpg')"
          aria-label="Nom du partenaire Performance 3"
          target="_blank" rel="noopener noreferrer">
       </a>
@@ -530,23 +655,23 @@
     -->
     <p class="partenaires__tier-label">Partenaires Essentiels</p>
     <div class="partenaires__grid partenaires__grid--essentiels">
-         <a href="#"
+         <a href="https://www.octopus-sport.com/"
          class="partenaire-logo"
-         style="background-image: url('/assets/Octopus%20Sport-jjeGrqNe.png')"
+         style="background-image: url('/assets/Octopus%20Sport.png')"
          aria-label="Nom du partenaire Essentiel 1"
          target="_blank" rel="noopener noreferrer">
       </a>
 
-      <a href="#"
+      <a href="https://apirun.fr/"
          class="partenaire-logo"
-         style="background-image: url('/assets/Apirun-DStN2TPO.jpg')"
+         style="background-image: url('/assets/Apirun.jpg')"
          aria-label="Nom du partenaire Essentiel 2"
          target="_blank" rel="noopener noreferrer">
       </a>
 
-      <a href="#"
+      <a href="https://beaussaisaventure.fr/"
          class="partenaire-logo"
-         style="background-image: url('/assets/beaussais-CyF7hPu3.jpg')"
+         style="background-image: url('/assets/beaussais.jpg')"
          aria-label="Nom du partenaire Essentiel 3"
          target="_blank" rel="noopener noreferrer">
       </a>
@@ -555,23 +680,23 @@
 
     <p class="partenaires__tier-label">Partenaires Institutionnels</p>
     <div class="partenaires__grid partenaires__grid--essentiels">
-         <a href="#"
+         <a href="https://www.ville-cancale.fr/"
          class="partenaire-logo"
-         style="background-image: url('/assets/Cancale-B9ajWqXN.webp')"
+         style="background-image: url('/assets/Cancale.webp')"
          aria-label="Nom du partenaire Essentiel 1"
          target="_blank" rel="noopener noreferrer">
       </a>
 
-      <a href="#"
+      <a href="https://www.saintcoulomb.com/"
          class="partenaire-logo"
-         style="background-image: url('/assets/logo_mairie_stcoulomb-CdJENoiP.jpg')"
+         style="background-image: url('/assets/logo_mairie_stcoulomb.jpg')"
          aria-label="Nom du partenaire Essentiel 2"
          target="_blank" rel="noopener noreferrer">
       </a>
 
-      <a href="#"
+      <a href="https://www.saint-malo.fr/"
          class="partenaire-logo"
-         style="background-image: url('/assets/saint-malo_new-2560x1175-CAUHUGLG.webp')"
+         style="background-image: url('/assets/saint-malo_new-2560x1175.webp')"
          aria-label="Nom du partenaire Essentiel 3"
          target="_blank" rel="noopener noreferrer">
       </a>
@@ -590,7 +715,7 @@
         <!-- Colonne 1 : Logo + infos -->
         <div class="footer__brand">
           <img 
-            src="/assets/logo-BxIxoCKM.png" 
+            src="/assets/logo.png" 
             alt="Logo Semi Cancale St Malo 2026"
             class="footer__logo"
             loading="lazy"
@@ -649,7 +774,7 @@
             <li><a href="/src/pages/parcours.html">Parcours</a></li>
             <li><a href="/src/pages/dossards.html">Dossards</a></li>
             <li><a href="/src/pages/resultats.html">Résultats</a></li>
-            <li><a href="/src/assets/reglement.pdf" target="_blank" rel="noopener noreferrer" class="footer__pdf">
+            <li><a href="/assets/reglement.pdf" target="_blank" rel="noopener noreferrer" class="footer__pdf">
               <!-- Petite icône PDF inline -->
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>

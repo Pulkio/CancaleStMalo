@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Parcours du Semi-Marathon Cancale Saint-Malo 2026 – 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="parcours semi-marathon, Cancale Saint-Malo, 21km, Côte d'Émeraude, tracé course" />
+  <link rel="icon" type="image/x-icon" href="/assets/icons/logoCS.ico" />
+  <link rel="canonical" href="https://semicancalestmalo.fr/src/pages/parcours.html" />
+  <title>Parcours – Semi-Marathon Cancale Saint-Malo 2026</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:locale"      content="fr_FR" />
+  <meta property="og:site_name"   content="Semi-Marathon Cancale Saint-Malo" />
+  <meta property="og:title"       content="Parcours – Semi-Marathon Cancale Saint-Malo 2026" />
+  <meta property="og:description" content="Parcours du Semi-Marathon Cancale Saint-Malo 2026 – 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude." />
+  <meta property="og:url"         content="https://semicancalestmalo.fr/src/pages/parcours.html" />
+  <meta property="og:image"       content="https://semicancalestmalo.fr/assets/photo_accueil.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Parcours – Semi-Marathon Cancale Saint-Malo 2026" />
+  <meta name="twitter:description" content="Parcours du Semi-Marathon Cancale Saint-Malo 2026 – 21,1 km de Cancale à Saint-Malo sur la Côte d'Émeraude." />
+  <meta name="twitter:image"       content="https://semicancalestmalo.fr/assets/photo_accueil.jpg" />
+
+  <!-- 1. Fonts Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    2. Leaflet CSS — DOIT être dans le <head>
+    C'est lui qui positionne correctement les tuiles de la carte.
+    Sans lui, les tuiles se dispersent partout sur la page.
+  -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- 3. Tes CSS (après Leaflet pour pouvoir surcharger si besoin) -->
+
+
+  <script type="module" crossorigin src="/assets/main-BHZmDBSL.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-C8C0szcE.css">
+  <link rel="stylesheet" crossorigin href="/assets/parcours-BQU5wsbU.css">
+  <link rel="stylesheet" crossorigin href="/assets/page-hero-n-uCjTas.css">
+</head>
+
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar__container">
+        <a href="/" class="navbar__logo">
+          <img src="/assets/logo.png" alt="Semi-Marathon Cancale Saint-Malo 2026" class="navbar__logo-img" loading="eager" />
+        </a>
+        <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__menu" id="navMenu">
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">S'inscrire <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/inscriptions-individuelles.html">Inscriptions individuelles</a></li>
+              <li><a href="/src/pages/challenge-entreprises.html">Challenge entreprises</a></li>
+              <li><a href="/src/pages/dossards.html">Dossards</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Info course <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/parcours.html">Parcours</a></li>
+              <li><a href="/src/pages/parking.html">Parking</a></li>
+              <li><a href="/src/pages/navettes.html">Navettes</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Résultats <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/resultats.html">Résultats</a></li>
+              <li><a href="/src/pages/classements.html">Classements & Récompenses</a></li>
+              <li><a href="/src/pages/photos-videos.html">Photos & Vidéos</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item navbar__item--dropdown">
+            <a href="#" class="navbar__link navbar__link--dropdown">Engagements <span class="navbar__arrow">▾</span></a>
+            <ul class="navbar__dropdown">
+              <li><a href="/src/pages/engagements.html">Nos engagements</a></li>
+              <li><a href="/src/pages/benevoles.html">Devenir bénévole</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item">
+            <a href="/src/pages/inscriptions-individuelles.html" class="navbar__cta">Je m'inscris</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" style="--hero-bg: url('/assets/Ravitaillement.jpg')">
+
+      <div class="page-hero__bg"></div>
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content container">
+        <span class="page-hero__tag">Info course</span>
+        <h1 class="page-hero__title">Le Parcours</h1>
+        <p class="page-hero__subtitle">21,1 km · Cancale → Saint-Coulomb → Saint-Malo · Côte d'Émeraude</p>
+        <div class="page-hero__breadcrumb">
+          <a href="/">Accueil</a><span class="sep">›</span><span>Info course</span><span class="sep">›</span><span>Parcours</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CHIFFRES CLÉS
+         ======================================== -->
+    <section class="parcours-stats">
+      <div class="container parcours-stats__grid">
+        <div class="parcours-stat" data-animate="fade-up">
+          <span class="parcours-stat__val">21,1</span>
+          <span class="parcours-stat__label">km</span>
+        </div>
+        <div class="parcours-stat" data-animate="fade-up" style="animation-delay:0.1s">
+          <span class="parcours-stat__val">+166</span>
+          <span class="parcours-stat__label">m dénivelé positif</span>
+        </div>
+        <div class="parcours-stat" data-animate="fade-up" style="animation-delay:0.2s">
+          <span class="parcours-stat__val">−205</span>
+          <span class="parcours-stat__label">m dénivelé négatif</span>
+        </div>
+        <div class="parcours-stat" data-animate="fade-up" style="animation-delay:0.3s">
+          <span class="parcours-stat__val">3</span>
+          <span class="parcours-stat__label">villes traversées</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CARTE DU PARCOURS
+         ======================================== -->
+    <section class="parcours-map section">
+      <div class="container">
+        <div class="parcours-map__inner">
+          <div class="parcours-map__img" data-animate="fade-left">
+            <img
+              src="/assets/parcours.jpg"
+              alt="Carte du parcours Semi-Marathon Cancale Saint-Malo"
+              loading="lazy"
+            />
+          </div>
+          <div class="parcours-map__details" data-animate="fade-right">
+            <span class="section__tag">Départ</span>
+            <h2 class="section__title">Avenue de Scissy, Cancale</h2>
+            <p>Le départ est donné à <strong>8h00</strong> avenue de Scissy à Cancale. Le parcours longe ensuite la Côte d'Émeraude jusqu'aux remparts de Saint-Malo.</p>
+            <div class="parcours-endpoint">
+              <div class="endpoint-item endpoint-item--start">
+                <span class="endpoint-icon">🟢</span>
+                <div>
+                  <strong>Départ</strong>
+                  <span>Avenue de Scissy, Cancale</span>
+                  <span class="endpoint-time">8h00 - 9h00</span>
+                </div>
+              </div>
+              <div class="endpoint-connector"></div>
+              <div class="endpoint-item endpoint-item--end">
+                <span class="endpoint-icon">🏁</span>
+                <div>
+                  <strong>Arrivée</strong>
+                  <span>Esplanade Saint-Vincent, Saint-Malo</span>
+                  <span class="endpoint-sub">Au pied des remparts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         ÉTAPES DU PARCOURS
+         ======================================== -->
+    <section class="etapes section section--gray">
+      <div class="container">
+        <span class="section__tag">Le tracé</span>
+        <h2 class="section__title">Étape par étape</h2>
+
+        <div class="etapes__timeline">
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker etape__marker--start">
+              <span>0</span>
+            </div>
+            <div class="etape__content">
+              <div class="etape__city-tag">Cancale</div>
+              <h3>Départ — Cancale</h3>
+              <p>Avenue de Scissy. Départ en vagues à partir de 8h00.</p>
+            </div>
+          </div>
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker">
+              <span>4</span>
+            </div>
+            <div class="etape__content">
+              <h3>Pointe du Grouin</h3>
+              <p>L'un des plus beaux points du parcours.</p>
+            </div>
+          </div>
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker etape__marker--ravito">
+              <span>5</span>
+            </div>
+            <div class="etape__content">
+              <div class="etape__ravito-tag">Ravitaillement</div>
+              <h3>km 5 — Ravitaillement</h3>
+              <p>Premier point de ravitaillement.</p>
+            </div>
+          </div>
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker">
+              <span>9</span>
+            </div>
+            <div class="etape__content">
+              <div class="etape__city-tag">Saint-Coulomb</div>
+              <h3>Côte du Guesclin — km 9</h3>
+              <p>Premier dénivelé majeur du parcours. Vue imprenable sur l'île du Guesclin.</p>
+            </div>
+          </div>
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker etape__marker--ravito">
+              <span>10</span>
+            </div>
+            <div class="etape__content">
+              <div class="etape__ravito-tag">Ravitaillement</div>
+              <h3>km 10 — Ravitaillement</h3>
+              <p>Point de contrôle du temps limite (1h25 max) et ravitaillement.</p>
+            </div>
+          </div>
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker">
+              <span>13</span>
+            </div>
+            <div class="etape__content">
+              <h3>Côte du Lupin — km 13</h3>
+              <p>Deuxième montée significative. La vue sur la mer depuis les hauteurs est à couper le souffle.</p>
+            </div>
+          </div>
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker etape__marker--ravito">
+              <span>15</span>
+            </div>
+            <div class="etape__content">
+              <div class="etape__ravito-tag">Ravitaillement</div>
+              <h3>km 15 — Ravitaillement</h3>
+              <p>Troisième ravitaillement. On entre progressivement sur Saint-Malo.</p>
+            </div>
+          </div>
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker">
+              <span>17</span>
+            </div>
+            <div class="etape__content">
+              <div class="etape__city-tag">Saint-Malo</div>
+              <h3>Côte du Pont — km 17</h3>
+              <p>Troisième dénivelé. Entrée sur Saint-Malo, les remparts se profilent à l'horizon.</p>
+            </div>
+          </div>
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker">
+              <span>20</span>
+            </div>
+            <div class="etape__content">
+              <h3>La Digue — km 20</h3>
+              <p>Dernière ligne droite face à la mer. Le public envahit le bord de route, l'ambiance est électrique.</p>
+            </div>
+          </div>
+
+          <div class="etape" data-animate="fade-left">
+            <div class="etape__marker etape__marker--end">
+              <span>21</span>
+            </div>
+            <div class="etape__content">
+              <div class="etape__city-tag">Intra-Muros</div>
+              <h3>Arrivée — Esplanade Saint-Vincent</h3>
+              <p>Au pied des remparts de Saint-Malo. Ravitaillement final, remise des médailles finisher.</p>
+              <div class="etape__ravito-tag">Ravitaillement arrivée</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         RAVITAILLEMENTS & CÔTES
+         ======================================== -->
+    <section class="infos-course section">
+      <div class="container">
+        <div class="infos-course__grid">
+
+          <div class="infos-block" data-animate="fade-left">
+            <h3 class="infos-block__title">🥤 Ravitaillements</h3>
+            <ul class="infos-block__list">
+              <li><span class="infos-km">km 5</span></li>
+              <li><span class="infos-km">km 10</span></li>
+              <li><span class="infos-km">km 15</span></li>
+              <li><span class="infos-km">Arrivée</span> Ravitaillement complet</li>
+            </ul>
+          </div>
+
+          <div class="infos-block" data-animate="fade-right">
+            <h3 class="infos-block__title">⛰️ Côtes principales</h3>
+            <ul class="infos-block__list">
+              <li><span class="infos-km">km 9</span> Côte du Guesclin</li>
+              <li><span class="infos-km">km 13</span> Côte du Lupin</li>
+              <li><span class="infos-km">km 17</span> Côte du Pont</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+     CARTE INTERACTIVE DU PARCOURS
+     On place la div#map ici, Leaflet va
+     s'en emparer via JavaScript.
+     ======================================== -->
+    <section class="carte-parcours section">
+      <div class="container">
+        <h2 class="section__title" data-animate="fade-up">Carte du parcours</h2>
+        <p class="section__subtitle" data-animate="fade-up">
+          Cancale → Saint-Coulomb → Saint-Malo · 21,1 km
+        </p>
+      </div>
+
+      <!-- 
+        La div#map doit avoir une hauteur définie en CSS,
+        sinon Leaflet affiche une carte invisible (hauteur 0).
+      -->
+      <div id="map" data-animate="fade-up"></div>
+    </section>
+
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="footer">
+      <div class="footer__container container">
+
+        <!-- Colonne 1 : Logo + infos -->
+        <div class="footer__brand">
+          <img 
+            src="/assets/logo.png" 
+            alt="Logo Semi Cancale St Malo 2026"
+            class="footer__logo"
+            loading="lazy"
+          />
+          <p>23 août 2026</p>
+          <p>Contact : <a href="mailto:cjfathlepro.stmalo@gmail.com">cjfathlepro.stmalo@gmail.com</a></p>
+          <p>Crédit Photo : <a href="https://objectif-pro.fr" target="_blank" rel="noopener noreferrer">@ObjectifPro</a></p>
+        </div>
+
+        <!-- Colonne 2 : Réseaux sociaux -->
+        <div class="footer__social-col">
+          <h4>Suivez-nous</h4>
+          <div class="footer__socials">
+
+            <a href="https://www.instagram.com/semicancalesaintmalo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+              Instagram
+            </a>
+
+            <a href="https://www.facebook.com/semimarathon.cancalesaintmalo" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+              Facebook
+            </a>
+
+            <a href="https://www.linkedin.com/showcase/semi-marathon-cancale-st-malo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer__social">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+              LinkedIn
+            </a>
+
+            <a href="https://www.youtube.com/@semicancalest-malo7152" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer__social">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/>
+              </svg>
+              YouTube
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Colonne 3 : Liens utiles dont règlement -->
+        <div class="footer__links">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="/src/pages/inscriptions-individuelles.html">S'inscrire</a></li>
+            <li><a href="/src/pages/parcours.html">Parcours</a></li>
+            <li><a href="/src/pages/dossards.html">Dossards</a></li>
+            <li><a href="/src/pages/resultats.html">Résultats</a></li>
+            <li><a href="/assets/reglement.pdf" target="_blank" rel="noopener noreferrer" class="footer__pdf">
+              <!-- Petite icône PDF inline -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+              Règlement de la course
+            </a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Semi-Marathon Cancale Saint-Malo · Tous droits réservés</p>
+      </div>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+    <script src="/src/js/parcours.js"></script>
+  </body>
+</html>
