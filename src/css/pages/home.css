@@ -672,6 +672,10 @@
     font-size: clamp(1.8rem, 10vw, 3rem);
   }
 
+  /* Supprime les lignes décoratives et le nowrap qui débordent sur petits écrans */
+  .hero__edition-line { display: none; }
+  .hero__edition-text { white-space: normal; }
+
   .hero__actions {
     flex-direction: column;
     align-items: center;

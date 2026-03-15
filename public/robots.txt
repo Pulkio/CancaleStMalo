@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap — remplacer le domaine par le vôtre
+Sitemap: https://semicancalestmalo.fr/sitemap.xml

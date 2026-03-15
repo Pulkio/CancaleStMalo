@@ -176,7 +176,7 @@
 }
 
 .etape__marker--ravito {
-  background: rgba(63, 170, 180, 0.1);
+  /*background: rgba(63, 170, 180, 0.1);*/
   border-color: var(--color-primary);
   color: var(--color-primary);
 }
