@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 3. Chargement du fichier GPX ---
   // Place ton fichier GPX dans /src/assets/parcours.gpx
-  new L.GPX('/src/assets/parcours.gpx', {
+  new L.GPX('/assets/parcours.gpx', {
 
     async: true, // Chargement asynchrone pour ne pas bloquer la page
 
