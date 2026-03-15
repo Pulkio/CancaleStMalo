@@ -733,6 +733,83 @@
   }
 }
 
+/* ---- PARTENAIRES ENTREPRISES ---- */
+.partenaires-pro__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.partenaires-pro__pitch p {
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+.partenaires-pro__ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.partenaires-pro__linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.partenaires-pro__args {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.partenaires-pro__arg {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(63, 170, 180, 0.25);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: background var(--transition), transform var(--transition);
+}
+.partenaires-pro__arg:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.partenaires-pro__arg-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.partenaires-pro__arg strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 0.35rem;
+}
+
+.partenaires-pro__arg p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .partenaires-pro__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ----  */
  /*
  * Bouton spécifique NextRun : on utilise leur vert #19ff93.
  * Le texte est sombre car le vert est très clair,

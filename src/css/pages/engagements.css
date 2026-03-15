@@ -230,7 +230,7 @@
 
 @media (max-width: 600px) {
   .eng-grid           { grid-template-columns: 1fr; }
-  .eng-intro__pillars { grid-template-columns: repeat(4, 1fr); }
+  .eng-intro__pillars { grid-template-columns: 1fr 1fr; }
 
   /* Les cercles de don un peu plus petits sur mobile */
   .don__amount {
