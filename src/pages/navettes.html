@@ -171,7 +171,7 @@
               <span class="navette-detail__icon">🕐</span>
               <div>
                 <strong>Horaires de départ</strong>
-                <span>De 6h00 à 7h45</span>
+                <span>De 5h45 à 8h00</span>
               </div>
             </div>
             <div class="navette-detail">
@@ -205,6 +205,94 @@
             <p>Il n'y a pas de navette retour de Saint-Malo vers Cancale après la course. Prévoyez votre propre moyen de transport ou organisez votre covoiturage en amont.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         QUELLE NAVETTE PRENDRE SELON LE SAS
+         ======================================== -->
+    <section class="navette-sas section">
+      <div class="container">
+        <span class="section__tag">En fonction de mon SAS</span>
+        <h2 class="section__title">Quelle navette prendre ?</h2>
+        <p class="navette-main__intro">Chaque SAS de départ correspond à un horaire de navette précis. Retrouvez votre SAS sur votre dossard pour connaître votre créneau.</p>
+
+        <div class="navette-sas__table-wrapper" data-animate="fade-up">
+          <table class="navette-sas__table">
+            <thead>
+              <tr>
+                <th>SAS et couleurs</th>
+                <th>Horaires des navettes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="sas-row sas-row--1">
+                <td><span class="sas-badge sas-badge--1">SAS 1 – Élite</span></td>
+                <td>05h45</td>
+              </tr>
+              <tr class="sas-row sas-row--2">
+                <td><span class="sas-badge sas-badge--2">SAS 2 – PREF</span></td>
+                <td>06h00</td>
+              </tr>
+              <tr class="sas-row sas-row--3">
+                <td><span class="sas-badge sas-badge--3">SAS 3 < 1h40</span></td>
+                <td>06h15</td>
+              </tr>
+              <tr class="sas-row sas-row--4">
+                <td><span class="sas-badge sas-badge--4">SAS 4 < 1h47</span></td>
+                <td>06h30</td>
+              </tr>
+              <tr class="sas-row sas-row--5">
+                <td><span class="sas-badge sas-badge--5">SAS 5 < 1h53</span></td>
+                <td>06h45</td>
+              </tr>
+              <tr class="sas-row sas-row--6">
+                <td><span class="sas-badge sas-badge--6">SAS 6 < 1h58</span></td>
+                <td>07h00</td>
+              </tr>
+              <tr class="sas-row sas-row--7">
+                <td><span class="sas-badge sas-badge--7">SAS 7 < 2h04</span></td>
+                <td>07h15</td>
+              </tr>
+              <tr class="sas-row sas-row--8">
+                <td><span class="sas-badge sas-badge--8">SAS 8 < 2h10</span></td>
+                <td>07h30</td>
+              </tr>
+              <tr class="sas-row sas-row--9">
+                <td><span class="sas-badge sas-badge--9">SAS 9 < 2h20</span></td>
+                <td>07h45</td>
+              </tr>
+              <tr class="sas-row sas-row--10">
+                <td><span class="sas-badge sas-badge--10">SAS 10 > 2h20</span></td>
+                <td>08h00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="navette-sas__subtitle">Les créneaux conseillés</h3>
+
+        <div class="navette-sas__creneaux">
+          <div class="creneau-card creneau-card--rouge" data-animate="fade-up">
+            <h4>SAS 1, 2 & 3</h4>
+            <p class="creneau-card__horaire">Navettes conseillées de 05h45 à 06h30</p>
+            <p>Départs les plus rapides : prenez les premières navettes.</p>
+          </div>
+          <div class="creneau-card creneau-card--vert" data-animate="fade-up" style="animation-delay:0.1s">
+            <h4>SAS 4, 5 & 6</h4>
+            <p class="creneau-card__horaire">Navettes conseillées de 06h45 à 07h15</p>
+            <p>Privilégiez les navettes des créneaux intermédiaires.</p>
+          </div>
+          <div class="creneau-card creneau-card--bleu" data-animate="fade-up" style="animation-delay:0.2s">
+            <h4>SAS 7, 8, 9 & 10</h4>
+            <p class="creneau-card__horaire">Navettes conseillées de 07h30 à 08h00</p>
+            <p>Les navettes les plus tardives sont réservées en priorité aux SAS les plus tardifs.</p>
+          </div>
+        </div>
+
+        <p class="navette-sas__note">
+          Les participants inscrits au <strong>challenge entreprise</strong> peuvent choisir le SAS de leur choix. Chaque participant doit se référer au SAS indiqué sur son dossard et prendre la navette correspondant à ce SAS.
+        </p>
       </div>
     </section>
 
@@ -326,8 +414,6 @@
         <p>© 2026 Semi-Marathon Cancale Saint-Malo · Tous droits réservés</p>
       </div>
     </footer>
-
-
 
     <script type="module" src="/src/js/main.js"></script>
   </body>
