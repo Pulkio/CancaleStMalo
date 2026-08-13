@@ -120,7 +120,6 @@
 
     <!-- PAGE HERO -->
     <section class="page-hero" style="--hero-bg: url('/assets/Navettes.jpg')">
-
       <div class="page-hero__bg"></div>
       <div class="page-hero__overlay"></div>
       <div class="page-hero__content container">
@@ -139,8 +138,17 @@
     <section class="navette-main section">
       <div class="container">
         <span class="section__tag">Service navette</span>
-        <h2 class="section__title">Navettes gratuites vers le départ</h2>
-        <p class="navette-main__intro">Pour vous permettre de rejoindre le départ à Cancale depuis Saint-Malo, un service de navettes gratuites est mis en place le matin de la course.</p>
+        <h2 class="section__title">Organisation des navettes</h2>
+        <p class="navette-main__intro">Pour rejoindre le départ du Semi-Marathon à Cancale, des navettes gratuites sont mises à votre disposition le matin de la course.</p>
+
+        <!-- Nouveauté -->
+        <div class="navette-info-block navette-info-block--new" data-animate="fade-up">
+          <span class="navette-info-block__icon">📍</span>
+          <div>
+            <strong>Nouveauté cette année</strong>
+            <p>Les départs des navettes se feront désormais depuis le <strong>parking Paul Féval à Saint-Malo</strong> (et non plus depuis l'Office de Tourisme). Ce changement permet à chacun de bénéficier d'une place de stationnement à proximité immédiate des navettes.</p>
+          </div>
+        </div>
 
         <div class="navette-card" data-animate="fade-up">
           <div class="navette-card__route">
@@ -197,24 +205,51 @@
           </div>
         </div>
 
+        <!-- Covoiturage -->
+        <div class="navette-info-block navette-info-block--covoiturage" data-animate="fade-up">
+          <span class="navette-info-block__icon">🚗</span>
+          <div>
+            <strong>Covoiturage encouragé</strong>
+            <p>Nous encourageons vivement le <strong>covoiturage</strong>, que ce soit pour rejoindre le parking Paul Féval ou directement Cancale, afin de fluidifier l'accès à la zone de départ.</p>
+          </div>
+        </div>
+
+        <!-- Intra-Muros -->
+        <div class="navette-info-block navette-info-block--intra" data-animate="fade-up">
+          <span class="navette-info-block__icon">🏨</span>
+          <div>
+            <strong>Vous séjournez à Intra-Muros ?</strong>
+            <p>Si vous logez dans un hôtel à <strong>Intra-Muros</strong>, quelques navettes partiront directement de l'Office de Tourisme d'Intra-Muros pour rejoindre le départ à Cancale.</p>
+          </div>
+        </div>
+
+        <!-- Retour après course -->
+        <div class="navette-info-block navette-info-block--retour" data-animate="fade-up">
+          <span class="navette-info-block__icon">🔄</span>
+          <div>
+            <strong>Retour après la course</strong>
+            <p>Après la course, la ligne <strong>P+R Paul Féval</strong> du réseau <strong>MAT</strong> assure la liaison entre l'esplanade Saint-Vincent (Intra-Muros / Office du Tourisme) et le P+R Paul Féval. Le trajet est <strong>gratuit</strong> sur présentation du ticket de parking P+R Paul Féval.</p>
+          </div>
+        </div>
+
         <div class="navette-warning" data-animate="fade-up">
           <span class="navette-warning__icon">⚠️</span>
           <div>
-            <strong>Aucune navette retour après la course</strong>
-            <p>Il n'y a pas de navette retour de Saint-Malo vers Cancale après la course. Prévoyez votre propre moyen de transport ou organisez votre covoiturage en amont.</p>
+            <strong>Aucune navette retour organisée par l'événement entre Saint-Malo et Cancale</strong>
+            <p>En dehors de la ligne P+R Paul Féval mentionnée ci-dessus, il n'y a pas de navette retour de Saint-Malo vers Cancale après la course. Prévoyez votre propre moyen de transport ou organisez votre covoiturage en amont.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========================================
-         QUELLE NAVETTE PRENDRE SELON LE SAS
+         HORAIRES PAR SAS
          ======================================== -->
-    <section class="navette-sas section">
+    <section class="navette-sas section section--gray">
       <div class="container">
-        <span class="section__tag">En fonction de mon SAS</span>
-        <h2 class="section__title">Quelle navette prendre ?</h2>
-        <p class="navette-main__intro">Chaque SAS de départ correspond à un horaire de navette précis. Retrouvez votre SAS sur votre dossard pour connaître votre créneau.</p>
+        <span class="section__tag">Horaires détaillés</span>
+        <h2 class="section__title">Quelle navette prendre selon mon SAS ?</h2>
+        <p class="navette-sas__intro">Il est essentiel que chacun respecte les horaires de navette correspondant à son <strong>SAS</strong>, renseigné lors de l'inscription. Cela permettra aux navettes d'effectuer suffisamment de rotations et d'assurer une place à l'ensemble des participants.</p>
 
         <div class="navette-sas__table-wrapper" data-animate="fade-up">
           <table class="navette-sas__table">
@@ -225,52 +260,51 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="sas-row sas-row--1">
+              <tr>
                 <td><span class="sas-badge sas-badge--1">SAS 1 – Élite</span></td>
                 <td>05h45</td>
               </tr>
-              <tr class="sas-row sas-row--2">
-                <td><span class="sas-badge sas-badge--2">SAS 2 – PREF</span></td>
+              <tr>
+                <td><span class="sas-badge sas-badge--2">SAS 2 – Préf</span></td>
                 <td>06h00</td>
               </tr>
-              <tr class="sas-row sas-row--3">
-                <td><span class="sas-badge sas-badge--3">SAS 3 < 1h40</span></td>
+              <tr>
+                <td><span class="sas-badge sas-badge--3">SAS 3 <1h40</span></td>
                 <td>06h15</td>
               </tr>
-              <tr class="sas-row sas-row--4">
-                <td><span class="sas-badge sas-badge--4">SAS 4 < 1h47</span></td>
+              <tr>
+                <td><span class="sas-badge sas-badge--4">SAS 4 <1h47</span></td>
                 <td>06h30</td>
               </tr>
-              <tr class="sas-row sas-row--5">
-                <td><span class="sas-badge sas-badge--5">SAS 5 < 1h53</span></td>
+              <tr>
+                <td><span class="sas-badge sas-badge--5">SAS 5 <1h53</span></td>
                 <td>06h45</td>
               </tr>
-              <tr class="sas-row sas-row--6">
-                <td><span class="sas-badge sas-badge--6">SAS 6 < 1h58</span></td>
+              <tr>
+                <td><span class="sas-badge sas-badge--6">SAS 6 <1h58</span></td>
                 <td>07h00</td>
               </tr>
-              <tr class="sas-row sas-row--7">
-                <td><span class="sas-badge sas-badge--7">SAS 7 < 2h04</span></td>
+              <tr>
+                <td><span class="sas-badge sas-badge--7">SAS 7 <2h04</span></td>
                 <td>07h15</td>
               </tr>
-              <tr class="sas-row sas-row--8">
-                <td><span class="sas-badge sas-badge--8">SAS 8 < 2h10</span></td>
+              <tr>
+                <td><span class="sas-badge sas-badge--8">SAS 8 <2h10</span></td>
                 <td>07h30</td>
               </tr>
-              <tr class="sas-row sas-row--9">
-                <td><span class="sas-badge sas-badge--9">SAS 9 < 2h20</span></td>
+              <tr>
+                <td><span class="sas-badge sas-badge--9">SAS 9 <2h20</span></td>
                 <td>07h45</td>
               </tr>
-              <tr class="sas-row sas-row--10">
-                <td><span class="sas-badge sas-badge--10">SAS 10 > 2h20</span></td>
+              <tr>
+                <td><span class="sas-badge sas-badge--10">SAS 10 >2h20</span></td>
                 <td>08h00</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h3 class="navette-sas__subtitle">Les créneaux conseillés</h3>
-
+        <h3 class="navette-sas__subtitle">Créneaux conseillés</h3>
         <div class="navette-sas__creneaux">
           <div class="creneau-card creneau-card--rouge" data-animate="fade-up">
             <h4>SAS 1, 2 & 3</h4>
@@ -289,16 +323,14 @@
           </div>
         </div>
 
-        <p class="navette-sas__note">
-          Les participants inscrits au <strong>challenge entreprise</strong> peuvent choisir le SAS de leur choix. Chaque participant doit se référer au SAS indiqué sur son dossard et prendre la navette correspondant à ce SAS.
-        </p>
+        <p class="navette-sas__note">Les participants inscrits au <strong>challenge entreprise</strong> peuvent choisir le SAS de leur choix. Chaque participant doit se référer au SAS indiqué sur son dossard et prendre la navette correspondant à ce SAS.</p>
       </div>
     </section>
 
     <!-- ========================================
          CONSEILS
          ======================================== -->
-    <section class="navette-conseils section section--gray">
+    <section class="navette-conseils section">
       <div class="container">
         <span class="section__tag">Conseils logistiques</span>
         <h2 class="section__title">Bien organiser votre journée</h2>
@@ -312,7 +344,7 @@
           <div class="conseil-item" data-animate="fade-up" style="animation-delay:0.1s">
             <div class="conseil-item__num">2</div>
             <h3>Le matin — Prenez la navette</h3>
-            <p>Rejoignez le parking Paul Féval à Saint-Malo avant 7h45 pour prendre la navette gratuite vers Cancale. Le dernier départ est à <strong>7h45</strong>.</p>
+            <p>Rejoignez le parking Paul Féval à Saint-Malo à l'horaire correspondant à votre SAS. Le dernier départ est à <strong>8h00</strong>.</p>
           </div>
           <div class="conseil-item" data-animate="fade-up" style="animation-delay:0.2s">
             <div class="conseil-item__num">3</div>
@@ -322,7 +354,7 @@
           <div class="conseil-item" data-animate="fade-up" style="animation-delay:0.3s">
             <div class="conseil-item__num">4</div>
             <h3>Après la course — Retour Saint-Malo</h3>
-            <p>Prévoyez votre retour depuis Saint-Malo : covoiturage, transports en commun ou véhicule personnel stationné à Saint-Malo.</p>
+            <p>Utilisez la ligne P+R Paul Féval (gratuite sur présentation du ticket de parking) ou prévoyez votre covoiturage / véhicule personnel.</p>
           </div>
         </div>
       </div>
@@ -397,7 +429,6 @@
             <li><a href="/src/pages/dossards.html">Dossards</a></li>
             <li><a href="/src/pages/resultats.html">Résultats</a></li>
             <li><a href="/assets/reglement.pdf" target="_blank" rel="noopener noreferrer" class="footer__pdf">
-              <!-- Petite icône PDF inline -->
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                 <polyline points="14 2 14 8 20 8"/>
